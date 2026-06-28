@@ -1,0 +1,8 @@
+.ai-tasks
+*.8xp
+*.bin
+*.map
+/sourses/*
+/bin/*
+__pycache__
+/obj/*
