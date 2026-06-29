@@ -57,7 +57,89 @@ static void draw_x_est_2(void) {
     g_disc(150, 130, 7, COL_LIGHT);
 }
 
+static void draw_x_est_5(void) {
+    g_line(80, 100, 180, 100, COL_GRAY);
+    g_line(180, 100, 180, 200, COL_GRAY);
+    g_line(180, 200, 80, 200, COL_GRAY);
+    g_line(80, 200, 80, 100, COL_GRAY);
+    g_line(120, 60, 220, 60, COL_GRAY);
+    g_line(220, 60, 220, 160, COL_GRAY);
+    g_line(220, 160, 120, 160, COL_GRAY);
+    g_line(120, 160, 120, 60, COL_GRAY);
+    g_line(80, 100, 120, 60, COL_GRAY);
+    g_line(180, 100, 220, 60, COL_GRAY);
+    g_line(180, 200, 220, 160, COL_GRAY);
+    g_line(80, 200, 120, 160, COL_GRAY);
+    g_disc(80, 100, 6, COL_LIGHT);
+    g_disc(180, 100, 6, COL_LIGHT);
+    g_disc(180, 200, 6, COL_LIGHT);
+    g_disc(80, 200, 6, COL_LIGHT);
+    g_disc(120, 60, 6, COL_LIGHT);
+    g_disc(220, 60, 6, COL_LIGHT);
+    g_disc(220, 160, 6, COL_LIGHT);
+    g_disc(120, 160, 6, COL_LIGHT);
+    g_disc(150, 130, 7, COL_LIGHT);
+}
+
+static void draw_x_est_6(void) {
+    g_line(80, 100, 180, 100, COL_GRAY);
+    g_line(180, 100, 180, 200, COL_GRAY);
+    g_line(180, 200, 80, 200, COL_GRAY);
+    g_line(80, 200, 80, 100, COL_GRAY);
+    g_line(120, 60, 220, 60, COL_GRAY);
+    g_line(220, 60, 220, 160, COL_GRAY);
+    g_line(220, 160, 120, 160, COL_GRAY);
+    g_line(120, 160, 120, 60, COL_GRAY);
+    g_line(80, 100, 120, 60, COL_GRAY);
+    g_line(180, 100, 220, 60, COL_GRAY);
+    g_line(180, 200, 220, 160, COL_GRAY);
+    g_line(80, 200, 120, 160, COL_GRAY);
+    g_disc(80, 100, 6, COL_LIGHT);
+    g_disc(180, 100, 6, COL_LIGHT);
+    g_disc(180, 200, 6, COL_LIGHT);
+    g_disc(80, 200, 6, COL_LIGHT);
+    g_disc(120, 60, 6, COL_LIGHT);
+    g_disc(220, 60, 6, COL_LIGHT);
+    g_disc(220, 160, 6, COL_LIGHT);
+    g_disc(120, 160, 6, COL_LIGHT);
+    g_disc(130, 150, 6, COL_LIGHT);
+    g_disc(170, 110, 6, COL_LIGHT);
+    g_disc(100, 130, 6, COL_LIGHT);
+    g_disc(200, 130, 6, COL_LIGHT);
+    g_disc(150, 80, 6, COL_LIGHT);
+    g_disc(150, 180, 6, COL_LIGHT);
+}
+
 static void draw_x_den_1(void) {
+    g_line(80, 100, 180, 100, COL_GRAY);
+    g_line(180, 100, 180, 200, COL_GRAY);
+    g_line(180, 200, 80, 200, COL_GRAY);
+    g_line(80, 200, 80, 100, COL_GRAY);
+    g_line(120, 60, 220, 60, COL_GRAY);
+    g_line(220, 60, 220, 160, COL_GRAY);
+    g_line(220, 160, 120, 160, COL_GRAY);
+    g_line(120, 160, 120, 60, COL_GRAY);
+    g_line(80, 100, 120, 60, COL_GRAY);
+    g_line(180, 100, 220, 60, COL_GRAY);
+    g_line(180, 200, 220, 160, COL_GRAY);
+    g_line(80, 200, 120, 160, COL_GRAY);
+    g_disc(80, 100, 6, COL_LIGHT);
+    g_disc(180, 100, 6, COL_LIGHT);
+    g_disc(180, 200, 6, COL_LIGHT);
+    g_disc(80, 200, 6, COL_LIGHT);
+    g_disc(120, 60, 6, COL_LIGHT);
+    g_disc(220, 60, 6, COL_LIGHT);
+    g_disc(220, 160, 6, COL_LIGHT);
+    g_disc(120, 160, 6, COL_LIGHT);
+    g_disc(130, 150, 6, COL_LIGHT);
+    g_disc(170, 110, 6, COL_LIGHT);
+    g_disc(100, 130, 6, COL_LIGHT);
+    g_disc(200, 130, 6, COL_LIGHT);
+    g_disc(150, 80, 6, COL_LIGHT);
+    g_disc(150, 180, 6, COL_LIGHT);
+}
+
+static void draw_x_den_2(void) {
     g_line(80, 100, 180, 100, COL_GRAY);
     g_line(180, 100, 180, 200, COL_GRAY);
     g_line(180, 200, 80, 200, COL_GRAY);
@@ -110,7 +192,76 @@ static void draw_x_dif_2(void) {
     g_text("dx", 150, 188, COL_GRAY);
 }
 
+static void draw_x_dif_3(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("C", 38, 50, COL_GRAY);
+    g_text("x", 270, 210, COL_GRAY);
+    g_line(70, 80, 250, 170, COL_BLUE);
+    g_dash(70, 80, 70, 205, COL_GRAY);
+    g_dash(250, 170, 250, 205, COL_GRAY);
+    g_text("CA", 75, 70, COL_BLACK);
+    g_text("CB", 230, 150, COL_BLACK);
+    g_text("dx", 150, 188, COL_GRAY);
+}
+
+static void draw_x_dif_4(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("C", 38, 50, COL_GRAY);
+    g_text("x", 270, 210, COL_GRAY);
+    g_line(70, 80, 250, 170, COL_BLUE);
+    g_dash(70, 80, 70, 205, COL_GRAY);
+    g_dash(250, 170, 250, 205, COL_GRAY);
+    g_text("CA", 75, 70, COL_BLACK);
+    g_text("CB", 230, 150, COL_BLACK);
+    g_text("dx", 150, 188, COL_GRAY);
+}
+
+static void draw_x_dif_5(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("C", 38, 50, COL_GRAY);
+    g_text("x", 270, 210, COL_GRAY);
+    g_line(70, 80, 250, 170, COL_BLUE);
+    g_dash(70, 80, 70, 205, COL_GRAY);
+    g_dash(250, 170, 250, 205, COL_GRAY);
+    g_text("CA", 75, 70, COL_BLACK);
+    g_text("CB", 230, 150, COL_BLACK);
+    g_text("dx", 150, 188, COL_GRAY);
+}
+
 static void draw_x_arr_2(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("lnD", 30, 50, COL_GRAY);
+    g_text("1/T", 264, 210, COL_GRAY);
+    g_line(75, 80, 260, 185, COL_BLUE);
+    g_dot(110, 100, COL_RED);
+    g_dot(220, 162, COL_RED);
+    g_text("(1/T1,lnD1)", 110, 86, COL_BLACK);
+    g_text("(1/T2,lnD2)", 150, 168, COL_BLACK);
+}
+
+static void draw_x_arr_3(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("lnD", 30, 50, COL_GRAY);
+    g_text("1/T", 264, 210, COL_GRAY);
+    g_line(75, 80, 260, 185, COL_BLUE);
+    g_dot(110, 100, COL_RED);
+    g_dot(220, 162, COL_RED);
+    g_text("(1/T1,lnD1)", 110, 86, COL_BLACK);
+    g_text("(1/T2,lnD2)", 150, 168, COL_BLACK);
+}
+
+static void draw_x_arr_4(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("lnD", 30, 50, COL_GRAY);
+    g_text("1/T", 264, 210, COL_GRAY);
+    g_line(75, 80, 260, 185, COL_BLUE);
+    g_dot(110, 100, COL_RED);
+    g_dot(220, 162, COL_RED);
+    g_text("(1/T1,lnD1)", 110, 86, COL_BLACK);
+    g_text("(1/T2,lnD2)", 150, 168, COL_BLACK);
+}
+
+static void draw_x_arr_5(void) {
     g_axes(55, 56, 295, 205);
     g_text("lnD", 30, 50, COL_GRAY);
     g_text("1/T", 264, 210, COL_GRAY);
@@ -137,7 +288,83 @@ static void draw_x_dia_1(void) {
     g_text("E", 196, 140, COL_BLACK);
 }
 
+static void draw_x_dia_2(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("T", 38, 50, COL_GRAY);
+    g_text("%Sn", 262, 210, COL_GRAY);
+    g_line(60, 70, 190, 150, COL_BLUE);
+    g_line(190, 150, 285, 95, COL_BLUE);
+    g_line(95, 150, 250, 150, COL_BLACK);
+    g_dot(190, 150, COL_RED);
+    g_line(60, 150, 95, 150, COL_RED);
+    g_line(285, 150, 250, 150, COL_RED);
+    g_text("L", 150, 90, COL_BLUE);
+    g_text("a", 80, 175, COL_RED);
+    g_text("b", 255, 175, COL_RED);
+    g_text("E", 196, 140, COL_BLACK);
+}
+
+static void draw_x_dia_3(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("T", 38, 50, COL_GRAY);
+    g_text("%C", 268, 210, COL_GRAY);
+    g_line(55, 92, 207, 150, COL_BLUE);
+    g_line(207, 150, 262, 110, COL_BLUE);
+    g_line(90, 150, 270, 150, COL_BLACK);
+    g_dot(207, 150, COL_RED);
+    g_text("g", 150, 96, COL_GRAY);
+    g_text("727C", 210, 142, COL_BLACK);
+    g_text("0.76", 196, 158, COL_RED);
+    g_dash(145, 150, 145, 205, COL_GRAY);
+    g_dash(227, 150, 227, 205, COL_GRAY);
+    g_text("1045", 120, 192, COL_BLACK);
+    g_text("1086", 230, 178, COL_BLACK);
+}
+
+static void draw_x_dia_4(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("T", 38, 50, COL_GRAY);
+    g_text("%Ag", 262, 210, COL_GRAY);
+    g_line(55, 61, 227, 125, COL_BLUE);
+    g_line(227, 125, 295, 87, COL_BLUE);
+    g_line(55, 61, 74, 125, COL_RED);
+    g_line(295, 87, 274, 125, COL_RED);
+    g_line(74, 125, 274, 125, COL_BLACK);
+    g_line(74, 125, 66, 205, COL_RED);
+    g_line(274, 125, 285, 205, COL_RED);
+    g_dot(227, 125, COL_RED);
+    g_dash(271, 60, 271, 200, COL_GRAY);
+    g_dot(271, 62, COL_BLACK);
+    g_dot(271, 121, COL_BLACK);
+    g_dot(271, 163, COL_BLACK);
+    g_text("C", 276, 58, COL_BLACK);
+    g_text("B", 276, 114, COL_BLACK);
+    g_text("A", 276, 158, COL_BLACK);
+    g_text("L", 150, 80, COL_BLUE);
+    g_text("a", 70, 180, COL_RED);
+    g_text("b", 280, 150, COL_RED);
+}
+
 static void draw_x_ala_1(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("T", 38, 50, COL_GRAY);
+    g_text("%B", 270, 210, COL_GRAY);
+    g_line(55, 70, 130, 95, COL_BLUE);
+    g_line(130, 95, 210, 130, COL_BLUE);
+    g_line(210, 130, 285, 175, COL_BLUE);
+    g_line(55, 70, 140, 130, COL_RED);
+    g_line(140, 130, 220, 165, COL_RED);
+    g_line(220, 165, 285, 175, COL_RED);
+    g_dash(120, 120, 210, 120, COL_BLACK);
+    g_dot(120, 120, COL_RED);
+    g_dot(210, 120, COL_BLUE);
+    g_dot(165, 120, COL_BLACK);
+    g_text("L", 240, 80, COL_BLUE);
+    g_text("a", 90, 175, COL_RED);
+    g_text("a+L", 150, 100, COL_BLACK);
+}
+
+static void draw_x_ala_2(void) {
     g_axes(55, 56, 295, 205);
     g_text("T", 38, 50, COL_GRAY);
     g_text("%B", 270, 210, COL_GRAY);
@@ -178,6 +405,63 @@ static void draw_x_mec_3(void) {
     g_line(120, 120, 160, 95, COL_BLUE);
     g_line(160, 95, 210, 70, COL_BLUE);
     g_line(210, 70, 250, 100, COL_BLUE);
+}
+
+static void draw_x_mec_4(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("sig", 30, 50, COL_GRAY);
+    g_text("eps", 270, 210, COL_GRAY);
+    g_line(55, 205, 120, 120, COL_BLUE);
+    g_line(120, 120, 160, 95, COL_BLUE);
+    g_line(160, 95, 210, 70, COL_BLUE);
+    g_line(210, 70, 250, 100, COL_BLUE);
+    g_line(55, 205, 95, 150, COL_RED);
+    g_line(95, 150, 130, 135, COL_RED);
+    g_line(130, 135, 180, 120, COL_RED);
+    g_line(180, 120, 235, 145, COL_RED);
+}
+
+static void draw_x_mec_5(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("sig", 30, 50, COL_GRAY);
+    g_text("eps", 270, 210, COL_GRAY);
+    g_line(55, 205, 120, 120, COL_BLUE);
+    g_line(120, 120, 160, 95, COL_BLUE);
+    g_line(160, 95, 210, 70, COL_BLUE);
+    g_line(210, 70, 250, 100, COL_BLUE);
+    g_line(55, 205, 95, 150, COL_RED);
+    g_line(95, 150, 130, 135, COL_RED);
+    g_line(130, 135, 180, 120, COL_RED);
+    g_line(180, 120, 235, 145, COL_RED);
+}
+
+static void draw_x_mec_7(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("sig", 30, 50, COL_GRAY);
+    g_text("eps", 270, 210, COL_GRAY);
+    g_line(55, 205, 120, 120, COL_BLUE);
+    g_line(120, 120, 160, 95, COL_BLUE);
+    g_line(160, 95, 210, 70, COL_BLUE);
+    g_line(210, 70, 250, 100, COL_BLUE);
+    g_line(55, 205, 95, 150, COL_RED);
+    g_line(95, 150, 130, 135, COL_RED);
+    g_line(130, 135, 180, 120, COL_RED);
+    g_line(180, 120, 235, 145, COL_RED);
+}
+
+static void draw_x_tra_3(void) {
+    g_axes(55, 56, 295, 205);
+    g_text("sig", 30, 50, COL_GRAY);
+    g_text("eps", 270, 210, COL_GRAY);
+    g_line(55, 205, 66, 132, COL_BLUE);
+    g_line(66, 132, 96, 100, COL_BLUE);
+    g_line(96, 100, 150, 84, COL_BLUE);
+    g_line(150, 84, 205, 96, COL_BLUE);
+    g_dot(66, 132, COL_RED);
+    g_dot(150, 84, COL_RED);
+    g_text("E", 58, 168, COL_BLACK);
+    g_text("se", 72, 120, COL_RED);
+    g_text("LRT", 150, 70, COL_RED);
 }
 
 static void draw_x_gra_1(void) {
@@ -237,6 +521,99 @@ static void draw_cal_6_27(void) {
     g_text("se", 108, 80, COL_RED);
     g_text("LRT", 175, 68, COL_RED);
 }
+
+static const TextLine x_lig_1_pg0[] = {
+    { "Descreva as ligacoes quimicas", 14, 62, COL_BLACK },
+    { "primarias. Para cada uma indique os", 14, 82, COL_BLACK },
+    { "elementos envolvidos, como os", 14, 102, COL_BLACK },
+    { "eletrons interagem e as classes de", 14, 122, COL_BLACK },
+    { "materiais em que ocorre.", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_lig_1_pg1[] = {
+    { "Ligacao metalica:", 14, 62, COL_BLUE },
+    { "elementos: metais.", 14, 82, COL_BLACK },
+    { "eletrons livres formam um mar de", 14, 102, COL_BLACK },
+    { "eletrons que mantem a estrutura.", 14, 122, COL_BLACK },
+    { "ocorre em metais e ligas metalicas.", 14, 142, COL_BLACK },
+    { "Ligacao covalente:", 14, 162, COL_BLUE },
+    { "elementos: ametais.", 14, 182, COL_BLACK },
+};
+
+static const TextLine x_lig_1_pg2[] = {
+    { "atomos compartilham eletrons para", 14, 62, COL_BLACK },
+    { "ficarem estaveis.", 14, 82, COL_BLACK },
+    { "ocorre em polimeros e ceramicas.", 14, 102, COL_BLACK },
+    { "Ligacao ionica:", 14, 122, COL_BLUE },
+    { "elementos: metal + ametal.", 14, 142, COL_BLACK },
+    { "um atomo doa e o outro recebe", 14, 162, COL_BLACK },
+    { "eletron (atracao entre ions).", 14, 182, COL_BLACK },
+};
+
+static const TextLine x_lig_1_pg3[] = {
+    { "ocorre em ceramicas e sais.", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_lig_1_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "Metalica: mar de eletrons (metais)", 14, 82, COL_RED },
+    { "Covalente: compartilha (polimero)", 14, 102, COL_RED },
+    { "Ionica: doa/recebe (ceramica)", 14, 122, COL_RED },
+};
+
+static const Page x_lig_1_pages[] = {
+    { "Enunciado", "",
+      x_lig_1_pg0, COUNT(x_lig_1_pg0), 0, 0, 0 },
+    { "Resolucao", "parte 1/3",
+      x_lig_1_pg1, COUNT(x_lig_1_pg1), 0, 0, 0 },
+    { "Resolucao", "parte 2/3",
+      x_lig_1_pg2, COUNT(x_lig_1_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 3/3",
+      x_lig_1_pg3, COUNT(x_lig_1_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_lig_1_pg4, COUNT(x_lig_1_pg4), "3 ligacoes primarias", 144, 0 }
+};
+
+static const TextLine x_lig_2_pg0[] = {
+    { "Proponha um dispositivo do jogo que", 14, 62, COL_BLACK },
+    { "combine metal, polimero e ceramica.", 14, 82, COL_BLACK },
+    { "Indique a classe de cada componente", 14, 102, COL_BLACK },
+    { "e o tipo de ligacao quimica.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_lig_2_pg1[] = {
+    { "Dispositivo: uma lanterna.", 14, 62, COL_BLUE },
+    { "ajuda o jogador a ver no escuro.", 14, 82, COL_BLACK },
+    { "Corpo - metal:", 14, 102, COL_BLUE },
+    { "ligacao metalica (da resistencia).", 14, 122, COL_BLACK },
+    { "Pegada - polimero:", 14, 142, COL_BLUE },
+    { "ligacao covalente (isola e ajuda", 14, 162, COL_BLACK },
+    { "a segurar na mao).", 14, 182, COL_BLACK },
+};
+
+static const TextLine x_lig_2_pg2[] = {
+    { "Lente - vidro (ceramica):", 14, 62, COL_BLUE },
+    { "ligacoes ionica e covalente", 14, 82, COL_BLACK },
+    { "(deixa a luz passar).", 14, 102, COL_BLACK },
+};
+
+static const TextLine x_lig_2_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "Lanterna: metal (metalica),", 14, 82, COL_RED },
+    { "polimero (covalente),", 14, 102, COL_RED },
+    { "vidro (ionica + covalente)", 14, 122, COL_RED },
+};
+
+static const Page x_lig_2_pages[] = {
+    { "Enunciado", "",
+      x_lig_2_pg0, COUNT(x_lig_2_pg0), 0, 0, 0 },
+    { "Resolucao", "parte 1/2",
+      x_lig_2_pg1, COUNT(x_lig_2_pg1), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_lig_2_pg2, COUNT(x_lig_2_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_lig_2_pg3, COUNT(x_lig_2_pg3), "Lanterna metal/polim/vidro", 144, 0 }
+};
 
 static const TextLine x_est_1_pg0[] = {
     { "O aluminio tem estrutura CFC com", 14, 62, COL_BLACK },
@@ -353,6 +730,135 @@ static const Page x_est_3_pages[] = {
       x_est_3_pg2, COUNT(x_est_3_pg2), "FEA(CFC) = 0.74", 104, 0 }
 };
 
+static const TextLine x_est_4_pg0[] = {
+    { "Complete os parametros das celulas", 14, 62, COL_BLACK },
+    { "unitarias CCC e CFC: numero de", 14, 82, COL_BLACK },
+    { "atomos n, volume Vc e a relacao", 14, 102, COL_BLACK },
+    { "entre aresta a e raio R.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_est_4_pg1[] = {
+    { "CCC (corpo centrado):", 14, 62, COL_BLUE },
+    { "n = 2 atomos por celula", 14, 82, COL_BLACK },
+    { "a = 4R / raiz(3)", 14, 102, COL_BLACK },
+    { "Vc = a^3 = (4R/raiz3)^3", 14, 122, COL_BLACK },
+    { "CFC (faces centradas):", 14, 142, COL_BLUE },
+    { "n = 4 atomos por celula", 14, 162, COL_BLACK },
+    { "a = 2R raiz(2)", 14, 182, COL_BLACK },
+};
+
+static const TextLine x_est_4_pg2[] = {
+    { "Vc = a^3 = (2R raiz2)^3", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_est_4_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "CCC: n=2, a=4R/raiz3", 14, 82, COL_RED },
+    { "CFC: n=4, a=2R raiz2", 14, 102, COL_RED },
+    { "Vc = a^3", 14, 122, COL_RED },
+};
+
+static const Page x_est_4_pages[] = {
+    { "Enunciado", "",
+      x_est_4_pg0, COUNT(x_est_4_pg0), 0, 0, 0 },
+    { "Resolucao", "parte 1/2",
+      x_est_4_pg1, COUNT(x_est_4_pg1), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_est_4_pg2, COUNT(x_est_4_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_est_4_pg3, COUNT(x_est_4_pg3), "CCC n2; CFC n4; Vc=a^3", 144, 0 }
+};
+
+static const TextLine x_est_5_pg0[] = {
+    { "Defina e calcule o fator de", 14, 62, COL_BLACK },
+    { "empacotamento atomico (FEA) das", 14, 82, COL_BLACK },
+    { "estruturas CCC e CFC.", 14, 102, COL_BLACK },
+};
+
+static const TextLine x_est_5_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_est_5_pg2[] = {
+    { "FEA = volume de atomos / Vc.", 14, 62, COL_BLUE },
+    { "CCC: n=2, a = 4R/raiz3", 14, 82, COL_BLUE },
+    { "Vat = 2*(4/3)pi R^3", 14, 102, COL_BLACK },
+    { "Vc = (4R/raiz3)^3 = 12.32 R^3", 14, 122, COL_BLACK },
+    { "FEA = 8.378 R^3 / 12.32 R^3", 14, 142, COL_BLACK },
+    { "FEA(CCC) = 0.68", 14, 162, COL_RED },
+    { "CFC: n=4, a = 2R raiz2", 14, 182, COL_BLUE },
+};
+
+static const TextLine x_est_5_pg3[] = {
+    { "FEA(CFC) = pi/(3 raiz2)", 14, 62, COL_BLACK },
+    { "FEA(CFC) = 0.74", 14, 82, COL_RED },
+};
+
+static const TextLine x_est_5_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "FEA(CCC) = 0.68", 14, 82, COL_RED },
+    { "FEA(CFC) = 0.74", 14, 102, COL_RED },
+};
+
+static const Page x_est_5_pages[] = {
+    { "Enunciado", "",
+      x_est_5_pg0, COUNT(x_est_5_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_est_5_pg1, COUNT(x_est_5_pg1), 0, 0, draw_x_est_5 },
+    { "Resolucao", "parte 1/2",
+      x_est_5_pg2, COUNT(x_est_5_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_est_5_pg3, COUNT(x_est_5_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_est_5_pg4, COUNT(x_est_5_pg4), "CCC 0.68; CFC 0.74", 124, 0 }
+};
+
+static const TextLine x_est_6_pg0[] = {
+    { "O rodio tem raio R = 0.1345 nm,", 14, 62, COL_BLACK },
+    { "massa A = 102.91 g/mol e densidade", 14, 82, COL_BLACK },
+    { "rho = 12.41 g/cm3. Determine se a", 14, 102, COL_BLACK },
+    { "estrutura e CFC ou CCC.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_est_6_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_est_6_pg2[] = {
+    { "Teste cada estrutura por", 14, 62, COL_BLUE },
+    { "rho=nA/(VcNa)", 14, 82, COL_BLUE },
+    { "R = 1.345e-8 cm", 14, 102, COL_BLACK },
+    { "CCC (n=2): a = 4R/raiz3 = 3.106e-8", 14, 122, COL_BLUE },
+    { "rho_CCC = 11.4 g/cm3 (nao bate)", 14, 142, COL_BLACK },
+    { "CFC (n=4): a = 2R raiz2 = 3.804e-8", 14, 162, COL_BLUE },
+    { "Vc = 5.506e-23 cm3", 14, 182, COL_BLACK },
+};
+
+static const TextLine x_est_6_pg3[] = {
+    { "rho_CFC =", 14, 62, COL_BLACK },
+    { "4*102.91/(5.506e-23*6.022e23)", 14, 82, COL_BLACK },
+    { "rho_CFC = 12.41 g/cm3 -> CFC", 14, 102, COL_RED },
+};
+
+static const TextLine x_est_6_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "rho_CFC = 12.41 g/cm3 (confere)", 14, 82, COL_RED },
+    { "Estrutura = CFC", 14, 102, COL_RED },
+};
+
+static const Page x_est_6_pages[] = {
+    { "Enunciado", "",
+      x_est_6_pg0, COUNT(x_est_6_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_est_6_pg1, COUNT(x_est_6_pg1), 0, 0, draw_x_est_6 },
+    { "Resolucao", "parte 1/2",
+      x_est_6_pg2, COUNT(x_est_6_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_est_6_pg3, COUNT(x_est_6_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_est_6_pg4, COUNT(x_est_6_pg4), "Rodio e CFC", 124, 0 }
+};
+
 static const TextLine x_den_1_pg0[] = {
     { "Calcule a densidade teorica do", 14, 62, COL_BLACK },
     { "aluminio (CFC): A = 26.982 g/mol,", 14, 82, COL_BLACK },
@@ -393,6 +899,83 @@ static const Page x_den_1_pages[] = {
       x_den_1_pg3, COUNT(x_den_1_pg3), 0, 0, 0 },
     { "Resultado", "Final",
       x_den_1_pg4, COUNT(x_den_1_pg4), "rho = 2.70 g/cm3", 104, 0 }
+};
+
+static const TextLine x_den_2_pg0[] = {
+    { "Uma tabela traz estrutura, massa e", 14, 62, COL_BLACK },
+    { "raio de varios metais (A a L). Pela", 14, 82, COL_BLACK },
+    { "densidade teorica, identifique o", 14, 102, COL_BLACK },
+    { "metal C: CFC, A = 63.546 g/mol,", 14, 122, COL_BLACK },
+    { "R = 0.1278 nm.", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_den_2_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_den_2_pg2[] = {
+    { "Densidade: rho = n A / (Vc Na)", 14, 62, COL_BLUE },
+    { "CFC: n=4, a = 2R raiz2 (R em cm)", 14, 82, COL_BLUE },
+    { "R = 1.278e-8 cm; a = 3.614e-8 cm", 14, 102, COL_BLACK },
+    { "Vc = a^3 = 4.721e-23 cm3", 14, 122, COL_BLACK },
+    { "rho = 4*63.546/(4.721e-23*6.022e23)", 14, 142, COL_BLACK },
+    { "rho = 8.94 g/cm3", 14, 162, COL_RED },
+    { "Compara com a literatura:", 14, 182, COL_BLUE },
+};
+
+static const TextLine x_den_2_pg3[] = {
+    { "bate com o cobre (Cu ~ 8.96)", 14, 62, COL_RED },
+};
+
+static const TextLine x_den_2_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "rho = 8.94 g/cm3", 14, 82, COL_RED },
+    { "Metal C = cobre (Cu)", 14, 102, COL_RED },
+};
+
+static const Page x_den_2_pages[] = {
+    { "Enunciado", "",
+      x_den_2_pg0, COUNT(x_den_2_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_den_2_pg1, COUNT(x_den_2_pg1), 0, 0, draw_x_den_2 },
+    { "Resolucao", "parte 1/2",
+      x_den_2_pg2, COUNT(x_den_2_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_den_2_pg3, COUNT(x_den_2_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_den_2_pg4, COUNT(x_den_2_pg4), "Metal C = Cu (8.94 g/cm3)", 124, 0 }
+};
+
+static const TextLine x_den_3_pg0[] = {
+    { "Identifique a estrutura (CCC ou CFC)", 14, 62, COL_BLACK },
+    { "de dois metais pela densidade:", 14, 82, COL_BLACK },
+    { "M: rho=5.96, A=50.9, R=0.132 nm;", 14, 102, COL_BLACK },
+    { "N: rho=13.43, A=107.6, R=0.133 nm.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_den_3_pg1[] = {
+    { "Calcula rho nas duas hipoteses.", 14, 62, COL_BLUE },
+    { "Metal M (R=1.32e-8 cm):", 14, 82, COL_BLUE },
+    { "CCC: a=4R/raiz3=3.048e-8; rho=5.96", 14, 102, COL_BLACK },
+    { "bate em CCC -> M e CCC", 14, 122, COL_RED },
+    { "Metal N (R=1.33e-8 cm):", 14, 142, COL_BLUE },
+    { "CFC: a=2R raiz2=3.762e-8; rho=13.4", 14, 162, COL_BLACK },
+    { "bate em CFC -> N e CFC", 14, 182, COL_RED },
+};
+
+static const TextLine x_den_3_pg2[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "Metal M = CCC (rho=5.96)", 14, 82, COL_RED },
+    { "Metal N = CFC (rho=13.4)", 14, 102, COL_RED },
+};
+
+static const Page x_den_3_pages[] = {
+    { "Enunciado", "",
+      x_den_3_pg0, COUNT(x_den_3_pg0), 0, 0, 0 },
+    { "Resolucao", "passo a passo",
+      x_den_3_pg1, COUNT(x_den_3_pg1), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_den_3_pg2, COUNT(x_den_3_pg2), "M = CCC; N = CFC", 124, 0 }
 };
 
 static const TextLine x_dif_1_pg0[] = {
@@ -468,6 +1051,118 @@ static const Page x_dif_2_pages[] = {
       x_dif_2_pg3, COUNT(x_dif_2_pg3), "x = 2.775 mm", 104, 0 }
 };
 
+static const TextLine x_dif_3_pg0[] = {
+    { "H2 difunde numa lamina de Pd de", 14, 62, COL_BLACK },
+    { "6 mm e area 0.25 m2, a 600 C.", 14, 82, COL_BLACK },
+    { "D = 1.7e-8 m2/s e as concentracoes", 14, 102, COL_BLACK },
+    { "valem 2.0 e 0.4 kg/m3. Ache a massa", 14, 122, COL_BLACK },
+    { "por hora.", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_dif_3_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_dif_3_pg2[] = {
+    { "1a Lei de Fick (fluxo):", 14, 62, COL_BLUE },
+    { "J = D dC/dx", 14, 82, COL_BLACK },
+    { "J = 1.7e-8*(2.0-0.4)/0.006", 14, 102, COL_BLACK },
+    { "J = 4.533e-6 kg/(m2 s)", 14, 122, COL_RED },
+    { "Massa em 1 h (t=3600 s):", 14, 142, COL_BLUE },
+    { "M = J A t = 4.533e-6*0.25*3600", 14, 162, COL_BLACK },
+    { "M = 4.08e-3 kg/h", 14, 182, COL_RED },
+};
+
+static const TextLine x_dif_3_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "M = 4.08e-3 kg/h", 14, 82, COL_RED },
+};
+
+static const Page x_dif_3_pages[] = {
+    { "Enunciado", "",
+      x_dif_3_pg0, COUNT(x_dif_3_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_dif_3_pg1, COUNT(x_dif_3_pg1), 0, 0, draw_x_dif_3 },
+    { "Resolucao", "passo a passo",
+      x_dif_3_pg2, COUNT(x_dif_3_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_dif_3_pg3, COUNT(x_dif_3_pg3), "M = 4.08e-3 kg/h", 104, 0 }
+};
+
+static const TextLine x_dif_4_pg0[] = {
+    { "Placa de Fe a 700 C entre uma", 14, 62, COL_BLACK },
+    { "atmosfera rica e outra pobre em C.", 14, 82, COL_BLACK },
+    { "A 5 e 10 mm a concentracao vale 1.2", 14, 102, COL_BLACK },
+    { "e 0.8 kg/m3. D = 3e-11 m2/s.", 14, 122, COL_BLACK },
+    { "Ache o fluxo de difusao do C.", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_dif_4_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_dif_4_pg2[] = {
+    { "1a Lei de Fick (regime estacionario):", 14, 62, COL_BLUE },
+    { "J = D (CA - CB)/(xB - xA)", 14, 82, COL_BLACK },
+    { "dx = (10 - 5) mm = 0.005 m", 14, 102, COL_BLACK },
+    { "J = 3e-11*(1.2 - 0.8)/0.005", 14, 122, COL_BLACK },
+    { "J = 3e-11 * 80", 14, 142, COL_BLACK },
+    { "J = 2.4e-9 kg/(m2 s)", 14, 162, COL_RED },
+};
+
+static const TextLine x_dif_4_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "J = 2.4e-9 kg/(m2 s)", 14, 82, COL_RED },
+};
+
+static const Page x_dif_4_pages[] = {
+    { "Enunciado", "",
+      x_dif_4_pg0, COUNT(x_dif_4_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_dif_4_pg1, COUNT(x_dif_4_pg1), 0, 0, draw_x_dif_4 },
+    { "Resolucao", "passo a passo",
+      x_dif_4_pg2, COUNT(x_dif_4_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_dif_4_pg3, COUNT(x_dif_4_pg3), "J = 2.4e-9 kg/m2s", 104, 0 }
+};
+
+static const TextLine x_dif_5_pg0[] = {
+    { "Chapa de aco a 1200 C com N2 nos", 14, 62, COL_BLACK },
+    { "dois lados. D = 6e-11 m2/s, fluxo", 14, 82, COL_BLACK },
+    { "J = 1.2e-7 kg/(m2 s). C cai de 4.0 a", 14, 102, COL_BLACK },
+    { "2.0 kg/m3. Ache a profundidade x", 14, 122, COL_BLACK },
+    { "(perfil linear).", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_dif_5_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_dif_5_pg2[] = {
+    { "Da 1a Lei de Fick isola-se x:", 14, 62, COL_BLUE },
+    { "J = D (C0 - Cx)/x", 14, 82, COL_BLACK },
+    { "x = D (C0 - Cx)/J", 14, 102, COL_BLACK },
+    { "x = 6e-11*(4.0 - 2.0)/1.2e-7", 14, 122, COL_BLACK },
+    { "x = 1.2e-10/1.2e-7", 14, 142, COL_BLACK },
+    { "x = 1.0e-3 m = 1.0 mm", 14, 162, COL_RED },
+};
+
+static const TextLine x_dif_5_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "x = 1.0 mm", 14, 82, COL_RED },
+};
+
+static const Page x_dif_5_pages[] = {
+    { "Enunciado", "",
+      x_dif_5_pg0, COUNT(x_dif_5_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_dif_5_pg1, COUNT(x_dif_5_pg1), 0, 0, draw_x_dif_5 },
+    { "Resolucao", "passo a passo",
+      x_dif_5_pg2, COUNT(x_dif_5_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_dif_5_pg3, COUNT(x_dif_5_pg3), "x = 1.0 mm", 104, 0 }
+};
+
 static const TextLine x_arr_1_pg0[] = {
     { "Q = 111 kJ/mol. D1 = 6.25e-11 m2/s", 14, 62, COL_BLACK },
     { "a 1400 K. Estime D2 a 1100 K.", 14, 82, COL_BLACK },
@@ -541,6 +1236,114 @@ static const Page x_arr_2_pages[] = {
       x_arr_2_pg4, COUNT(x_arr_2_pg4), "Q=252.5 kJ/mol; D0=2.17e-5", 124, 0 }
 };
 
+static const TextLine x_arr_3_pg0[] = {
+    { "Para o Fe no Ni: D=9.4e-16 a 1273 K", 14, 62, COL_BLACK },
+    { "e D=2.4e-14 a 1473 K. Qual o valor", 14, 82, COL_BLACK },
+    { "de D a 1100 C (1373 K)?", 14, 102, COL_BLACK },
+};
+
+static const TextLine x_arr_3_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_arr_3_pg2[] = {
+    { "Reta lnD vs 1/T entre os 2 pontos:", 14, 62, COL_BLUE },
+    { "lnD = lnD1 - (Q/R)(1/T - 1/T1)", 14, 82, COL_BLACK },
+    { "(Q/R) = ln(D2/D1)/(1/T1 - 1/T2)", 14, 102, COL_BLACK },
+    { "30377 K (inclinacao)", 14, 122, COL_RED },
+    { "1/1373 - 1/1273 = -5.72e-5", 14, 142, COL_BLACK },
+    { "lnD = ln(9.4e-16) + 30377*5.72e-5", 14, 162, COL_BLACK },
+    { "D = 5.34e-15 m2/s", 14, 182, COL_RED },
+};
+
+static const TextLine x_arr_3_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "D(1373 K) = 5.34e-15 m2/s", 14, 82, COL_RED },
+};
+
+static const Page x_arr_3_pages[] = {
+    { "Enunciado", "",
+      x_arr_3_pg0, COUNT(x_arr_3_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_arr_3_pg1, COUNT(x_arr_3_pg1), 0, 0, draw_x_arr_3 },
+    { "Resolucao", "passo a passo",
+      x_arr_3_pg2, COUNT(x_arr_3_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_arr_3_pg3, COUNT(x_arr_3_pg3), "D = 5.34e-15 m2/s", 104, 0 }
+};
+
+static const TextLine x_arr_4_pg0[] = {
+    { "Calcule o coeficiente de difusao do", 14, 62, COL_BLACK },
+    { "magnesio no aluminio a 550 C.", 14, 82, COL_BLACK },
+    { "Dados (tabela): D0 = 1.2e-4 m2/s e", 14, 102, COL_BLACK },
+    { "Q = 131 kJ/mol.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_arr_4_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_arr_4_pg2[] = {
+    { "Equacao de Arrhenius:", 14, 62, COL_BLUE },
+    { "D = D0 exp(-Q/(R T))", 14, 82, COL_BLACK },
+    { "T = 550 + 273 = 823 K", 14, 102, COL_BLACK },
+    { "Q/(R T) = 131000/(8.314*823) = 19.15", 14, 122, COL_BLACK },
+    { "D = 1.2e-4 * exp(-19.15)", 14, 142, COL_BLACK },
+    { "D = 5.8e-13 m2/s", 14, 162, COL_RED },
+};
+
+static const TextLine x_arr_4_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "D = 5.8e-13 m2/s", 14, 82, COL_RED },
+};
+
+static const Page x_arr_4_pages[] = {
+    { "Enunciado", "",
+      x_arr_4_pg0, COUNT(x_arr_4_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_arr_4_pg1, COUNT(x_arr_4_pg1), 0, 0, draw_x_arr_4 },
+    { "Resolucao", "passo a passo",
+      x_arr_4_pg2, COUNT(x_arr_4_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_arr_4_pg3, COUNT(x_arr_4_pg3), "D = 5.8e-13 m2/s", 104, 0 }
+};
+
+static const TextLine x_arr_5_pg0[] = {
+    { "A que temperatura a difusao do cobre", 14, 62, COL_BLACK },
+    { "no niquel tem D = 6.5e-17 m2/s?", 14, 82, COL_BLACK },
+    { "Dados (tabela): D0 = 2.7e-5 m2/s e", 14, 102, COL_BLACK },
+    { "Q = 256 kJ/mol.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_arr_5_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_arr_5_pg2[] = {
+    { "Isola T na equacao de Arrhenius:", 14, 62, COL_BLUE },
+    { "T = Q / (R ln(D0/D))", 14, 82, COL_BLACK },
+    { "ln(D0/D) = ln(2.7e-5/6.5e-17)", 14, 102, COL_BLACK },
+    { "26.75", 14, 122, COL_RED },
+    { "T = 256000/(8.314*26.75)", 14, 142, COL_BLACK },
+    { "T = 1151 K = 878 C", 14, 162, COL_RED },
+};
+
+static const TextLine x_arr_5_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "T = 1151 K (878 C)", 14, 82, COL_RED },
+};
+
+static const Page x_arr_5_pages[] = {
+    { "Enunciado", "",
+      x_arr_5_pg0, COUNT(x_arr_5_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_arr_5_pg1, COUNT(x_arr_5_pg1), 0, 0, draw_x_arr_5 },
+    { "Resolucao", "passo a passo",
+      x_arr_5_pg2, COUNT(x_arr_5_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_arr_5_pg3, COUNT(x_arr_5_pg3), "T = 1151 K = 878 C", 104, 0 }
+};
+
 static const TextLine x_dia_1_pg0[] = {
     { "No sistema Pb-Sn, identifique o", 14, 62, COL_BLACK },
     { "ponto eutetico (T e composicao) e", 14, 82, COL_BLACK },
@@ -575,6 +1378,139 @@ static const Page x_dia_1_pages[] = {
       x_dia_1_pg2, COUNT(x_dia_1_pg2), 0, 0, 0 },
     { "Resultado", "Final",
       x_dia_1_pg3, COUNT(x_dia_1_pg3), "Eutetico: 183 C; 61.9% Sn", 124, 0 }
+};
+
+static const TextLine x_dia_2_pg0[] = {
+    { "No diagrama eutetico Pb-Sn: (a) qual", 14, 62, COL_BLACK },
+    { "a temperatura e a composicao", 14, 82, COL_BLACK },
+    { "euteticas; (b) escreva a reacao", 14, 102, COL_BLACK },
+    { "eutetica; (c) o que sao ligas hipo e", 14, 122, COL_BLACK },
+    { "hipereuteticas.", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_dia_2_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_dia_2_pg2[] = {
+    { "(a) Ponto eutetico (leitura):", 14, 62, COL_BLUE },
+    { "T = 183 C; composicao = 61.9 wt% Sn", 14, 82, COL_BLACK },
+    { "(b) Reacao no resfriamento lento:", 14, 102, COL_BLUE },
+    { "L(61.9) -> alpha(18.3) + beta(97.8)", 14, 122, COL_BLACK },
+    { "a alpha e rica em Pb; beta em Sn", 14, 142, COL_BLACK },
+    { "(c) Em relacao a composicao eutetica:", 14, 162, COL_BLUE },
+    { "hipo: menos Sn que 61.9% (a esquerda)", 14, 182, COL_BLACK },
+};
+
+static const TextLine x_dia_2_pg3[] = {
+    { "hiper: mais Sn que 61.9% (a direita)", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_dia_2_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "183 C e 61.9 wt% Sn", 14, 82, COL_RED },
+    { "L -> alpha + beta", 14, 102, COL_RED },
+    { "hipo<61.9%<hiper", 14, 122, COL_RED },
+};
+
+static const Page x_dia_2_pages[] = {
+    { "Enunciado", "",
+      x_dia_2_pg0, COUNT(x_dia_2_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_dia_2_pg1, COUNT(x_dia_2_pg1), 0, 0, draw_x_dia_2 },
+    { "Resolucao", "parte 1/2",
+      x_dia_2_pg2, COUNT(x_dia_2_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_dia_2_pg3, COUNT(x_dia_2_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_dia_2_pg4, COUNT(x_dia_2_pg4), "Eutetico 183C/61.9% Sn", 144, 0 }
+};
+
+static const TextLine x_dia_3_pg0[] = {
+    { "Dois acos: 1045 (0.45% C) e 1086", 14, 62, COL_BLACK },
+    { "(0.86% C). (a) classifique cada um;", 14, 82, COL_BLACK },
+    { "(b) de o ponto eutetoide do Fe-Fe3C;", 14, 102, COL_BLACK },
+    { "(c) qual tem maior dureza?", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_dia_3_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_dia_3_pg2[] = {
+    { "Ponto eutetoide: 0.76% C, 727 C.", 14, 62, COL_BLUE },
+    { "(a) Comparando com 0.76% C:", 14, 82, COL_BLUE },
+    { "1045 (0.45%) < 0.76 -> hipoeutetoide", 14, 102, COL_BLACK },
+    { "1086 (0.86%) > 0.76 -> hipereutetoide", 14, 122, COL_BLACK },
+    { "(c) Mais carbono = mais cementita,", 14, 142, COL_BLUE },
+    { "logo mais duro:", 14, 162, COL_BLACK },
+    { "o aco 1086 tem maior dureza", 14, 182, COL_RED },
+};
+
+static const TextLine x_dia_3_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "1045 hipoeutetoide; 1086 hiper", 14, 82, COL_RED },
+    { "eutetoide: 0.76% C e 727 C", 14, 102, COL_RED },
+    { "mais duro: 1086", 14, 122, COL_RED },
+};
+
+static const Page x_dia_3_pages[] = {
+    { "Enunciado", "",
+      x_dia_3_pg0, COUNT(x_dia_3_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_dia_3_pg1, COUNT(x_dia_3_pg1), 0, 0, draw_x_dia_3 },
+    { "Resolucao", "passo a passo",
+      x_dia_3_pg2, COUNT(x_dia_3_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_dia_3_pg3, COUNT(x_dia_3_pg3), "1086 mais duro; eut 0.76%C", 144, 0 }
+};
+
+static const TextLine x_dia_4_pg0[] = {
+    { "Uma prata de lei (90% Ag, 10% Cu) e", 14, 62, COL_BLACK },
+    { "aquecida a 600, 800 e 1100 C. Use o", 14, 82, COL_BLACK },
+    { "diagrama Ag-Cu (eutetico 71.9% Ag,", 14, 102, COL_BLACK },
+    { "779 C) e ache as fases e proporcoes", 14, 122, COL_BLACK },
+    { "em cada temperatura.", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_dia_4_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_dia_4_pg2[] = {
+    { "1100 C: acima do liquidus.", 14, 62, COL_BLUE },
+    { "so liquido (100% L)", 14, 82, COL_RED },
+    { "800 C: regiao beta + L.", 14, 102, COL_BLUE },
+    { "CL~75% Ag, Cb~92% Ag; C0=90%", 14, 122, COL_BLACK },
+    { "wL=(92-90)/(92-75)=0.13 -> wL~13%", 14, 142, COL_BLACK },
+    { "beta ~87% ; L ~13%", 14, 162, COL_RED },
+    { "600 C: regiao alpha + beta.", 14, 182, COL_BLUE },
+};
+
+static const TextLine x_dia_4_pg3[] = {
+    { "Ca~3% Ag, Cb~96% Ag; C0=90%", 14, 62, COL_BLACK },
+    { "wa=(96-90)/(96-3)=0.06 -> alpha~6%", 14, 82, COL_BLACK },
+    { "beta ~94% ; alpha ~6%", 14, 102, COL_RED },
+};
+
+static const TextLine x_dia_4_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "1100C: 100% L", 14, 82, COL_RED },
+    { "800C: ~87% beta + ~13% L", 14, 102, COL_RED },
+    { "600C: ~94% beta + ~6% alpha", 14, 122, COL_RED },
+};
+
+static const Page x_dia_4_pages[] = {
+    { "Enunciado", "",
+      x_dia_4_pg0, COUNT(x_dia_4_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_dia_4_pg1, COUNT(x_dia_4_pg1), 0, 0, draw_x_dia_4 },
+    { "Resolucao", "parte 1/2",
+      x_dia_4_pg2, COUNT(x_dia_4_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_dia_4_pg3, COUNT(x_dia_4_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_dia_4_pg4, COUNT(x_dia_4_pg4), "L; b+L; a+b (3 temps)", 144, 0 }
 };
 
 static const TextLine x_ala_1_pg0[] = {
@@ -618,6 +1554,53 @@ static const Page x_ala_1_pages[] = {
       x_ala_1_pg3, COUNT(x_ala_1_pg3), 0, 0, 0 },
     { "Resultado", "Final",
       x_ala_1_pg4, COUNT(x_ala_1_pg4), "wL=72.7%; wa=27.3%", 104, 0 }
+};
+
+static const TextLine x_ala_2_pg0[] = {
+    { "No diagrama isomorfo Cu-Ni explique", 14, 62, COL_BLACK },
+    { "as regioes e o passo a passo da", 14, 82, COL_BLACK },
+    { "regra da alavanca. Aplique a uma", 14, 102, COL_BLACK },
+    { "liga 35% Ni a 1250 C (regiao alpha+L,", 14, 122, COL_BLACK },
+    { "CL=32 e Calpha=43 wt% Ni).", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_ala_2_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_ala_2_pg2[] = {
+    { "Regioes: acima do liquidus so L;", 14, 62, COL_BLUE },
+    { "abaixo do solidus so alpha; entre", 14, 82, COL_BLACK },
+    { "as duas linhas coexistem alpha + L.", 14, 102, COL_BLACK },
+    { "Passos da regra da alavanca:", 14, 122, COL_BLUE },
+    { "1) tracar a linha de amarracao em T;", 14, 142, COL_BLACK },
+    { "2) ler CL e Calpha nas extremidades;", 14, 162, COL_BLACK },
+    { "3) a fracao usa o braco oposto.", 14, 182, COL_BLACK },
+};
+
+static const TextLine x_ala_2_pg3[] = {
+    { "Aplicando (C0=35):", 14, 62, COL_BLUE },
+    { "wL = (Ca-C0)/(Ca-CL) = (43-35)/11", 14, 82, COL_BLACK },
+    { "wL = 0.727; w(alpha) = 0.273", 14, 102, COL_RED },
+};
+
+static const TextLine x_ala_2_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "alpha+L entre liquidus e solidus", 14, 82, COL_RED },
+    { "wL = 72.7%; w(alpha) = 27.3%", 14, 102, COL_RED },
+};
+
+static const Page x_ala_2_pages[] = {
+    { "Enunciado", "",
+      x_ala_2_pg0, COUNT(x_ala_2_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_ala_2_pg1, COUNT(x_ala_2_pg1), 0, 0, draw_x_ala_2 },
+    { "Resolucao", "parte 1/2",
+      x_ala_2_pg2, COUNT(x_ala_2_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_ala_2_pg3, COUNT(x_ala_2_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_ala_2_pg4, COUNT(x_ala_2_pg4), "wL=72.7%; wa=27.3%", 124, 0 }
 };
 
 static const TextLine x_mec_1_pg0[] = {
@@ -732,6 +1715,293 @@ static const Page x_mec_3_pages[] = {
       x_mec_3_pg2, COUNT(x_mec_3_pg2), 0, 0, 0 },
     { "Resultado", "Final",
       x_mec_3_pg3, COUNT(x_mec_3_pg3), "Ur: A=0.653; B=0.189 MJ/m3", 124, 0 }
+};
+
+static const TextLine x_mec_4_pg0[] = {
+    { "No estudo de caso, leia a tensao", 14, 62, COL_BLACK },
+    { "limite de escoamento (sigma_e) dos", 14, 82, COL_BLACK },
+    { "dois materiais pela reta a 0.2% e", 14, 102, COL_BLACK },
+    { "compare.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_mec_4_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_mec_4_pg2[] = {
+    { "sigma_e = tensao no offset de 0.2%", 14, 62, COL_BLUE },
+    { "(reta paralela a parte elastica).", 14, 82, COL_BLACK },
+    { "Material A (do grafico):", 14, 102, COL_BLUE },
+    { "sigma_e(A) = 280 MPa", 14, 122, COL_BLACK },
+    { "Material B (do grafico):", 14, 142, COL_BLUE },
+    { "sigma_e(B) = 275 MPa", 14, 162, COL_BLACK },
+    { "A e B tem escoamento parecido", 14, 182, COL_RED },
+};
+
+static const TextLine x_mec_4_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "sigma_e(A) = 280 MPa", 14, 82, COL_RED },
+    { "sigma_e(B) = 275 MPa", 14, 102, COL_RED },
+};
+
+static const Page x_mec_4_pages[] = {
+    { "Enunciado", "",
+      x_mec_4_pg0, COUNT(x_mec_4_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_mec_4_pg1, COUNT(x_mec_4_pg1), 0, 0, draw_x_mec_4 },
+    { "Resolucao", "passo a passo",
+      x_mec_4_pg2, COUNT(x_mec_4_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_mec_4_pg3, COUNT(x_mec_4_pg3), "se: A=280; B=275 MPa", 124, 0 }
+};
+
+static const TextLine x_mec_5_pg0[] = {
+    { "Determine a tensao limite de", 14, 62, COL_BLACK },
+    { "resistencia a tracao (LRT) dos", 14, 82, COL_BLACK },
+    { "materiais A e B, lendo o pico de", 14, 102, COL_BLACK },
+    { "cada curva, e compare.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_mec_5_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_mec_5_pg2[] = {
+    { "LRT = tensao maxima da curva.", 14, 62, COL_BLUE },
+    { "Material A:", 14, 82, COL_BLUE },
+    { "LRT(A) = 370 MPa", 14, 102, COL_BLACK },
+    { "Material B:", 14, 122, COL_BLUE },
+    { "LRT(B) = 410 MPa", 14, 142, COL_BLACK },
+    { "B suporta tensao maior que A", 14, 162, COL_RED },
+};
+
+static const TextLine x_mec_5_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "LRT(A) = 370 MPa", 14, 82, COL_RED },
+    { "LRT(B) = 410 MPa", 14, 102, COL_RED },
+    { "B mais resistente", 14, 122, COL_RED },
+};
+
+static const Page x_mec_5_pages[] = {
+    { "Enunciado", "",
+      x_mec_5_pg0, COUNT(x_mec_5_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_mec_5_pg1, COUNT(x_mec_5_pg1), 0, 0, draw_x_mec_5 },
+    { "Resolucao", "passo a passo",
+      x_mec_5_pg2, COUNT(x_mec_5_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_mec_5_pg3, COUNT(x_mec_5_pg3), "LRT: A=370; B=410 MPa", 144, 0 }
+};
+
+static const TextLine x_mec_6_pg0[] = {
+    { "Compare a tenacidade e a dureza dos", 14, 62, COL_BLACK },
+    { "materiais A e B a partir das curvas", 14, 82, COL_BLACK },
+    { "tensao-deformacao (A: mais ductil;", 14, 102, COL_BLACK },
+    { "B: mais resistente).", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_mec_6_pg1[] = {
+    { "Tenacidade = area sob a curva.", 14, 62, COL_BLUE },
+    { "A e bem mais ductil (16% x 9.8%),", 14, 82, COL_BLACK },
+    { "entao tem area maior:", 14, 102, COL_BLACK },
+    { "A e mais tenaz", 14, 122, COL_RED },
+    { "Dureza acompanha a resistencia.", 14, 142, COL_BLUE },
+    { "B tem maior LRT e modulo:", 14, 162, COL_BLACK },
+    { "B e mais duro", 14, 182, COL_RED },
+};
+
+static const TextLine x_mec_6_pg2[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "Mais tenaz: A (mais ductil)", 14, 82, COL_RED },
+    { "Mais duro: B (maior LRT)", 14, 102, COL_RED },
+};
+
+static const Page x_mec_6_pages[] = {
+    { "Enunciado", "",
+      x_mec_6_pg0, COUNT(x_mec_6_pg0), 0, 0, 0 },
+    { "Resolucao", "passo a passo",
+      x_mec_6_pg1, COUNT(x_mec_6_pg1), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_mec_6_pg2, COUNT(x_mec_6_pg2), "A mais tenaz; B mais duro", 124, 0 }
+};
+
+static const TextLine x_mec_7_pg0[] = {
+    { "Qual material sofre deformacao", 14, 62, COL_BLACK },
+    { "elastica de no maximo 1.0e-3 quando", 14, 82, COL_BLACK },
+    { "submetido a 150 MPa? (E_A = 60 GPa,", 14, 102, COL_BLACK },
+    { "E_B = 200 GPa).", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_mec_7_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_mec_7_pg2[] = {
+    { "Deformacao elastica: eps = sigma/E", 14, 62, COL_BLUE },
+    { "Material A:", 14, 82, COL_BLUE },
+    { "eps = 150/60000 = 2.5e-3 (passa de", 14, 102, COL_BLACK },
+    { "1e-3)", 14, 122, COL_BLACK },
+    { "Material B:", 14, 142, COL_BLUE },
+    { "eps = 150/200000 = 7.5e-4", 14, 162, COL_BLACK },
+    { "7.5e-4 < 1.0e-3 -> Material B", 14, 182, COL_RED },
+};
+
+static const TextLine x_mec_7_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "eps_A = 2.5e-3; eps_B = 7.5e-4", 14, 82, COL_RED },
+    { "Material B (fica < 1.0e-3)", 14, 102, COL_RED },
+};
+
+static const Page x_mec_7_pages[] = {
+    { "Enunciado", "",
+      x_mec_7_pg0, COUNT(x_mec_7_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_mec_7_pg1, COUNT(x_mec_7_pg1), 0, 0, draw_x_mec_7 },
+    { "Resolucao", "passo a passo",
+      x_mec_7_pg2, COUNT(x_mec_7_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_mec_7_pg3, COUNT(x_mec_7_pg3), "Material B (eps=7.5e-4)", 124, 0 }
+};
+
+static const TextLine x_tra_1_pg0[] = {
+    { "Um pedaco de cobre com 305 mm e", 14, 62, COL_BLACK },
+    { "tracionado com tensao de 276 MPa.", 14, 82, COL_BLACK },
+    { "Se a deformacao e so elastica, qual", 14, 102, COL_BLACK },
+    { "o alongamento? (E_Cu = 110 GPa)", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_tra_1_pg1[] = {
+    { "Deformacao elastica: eps = sigma/E", 14, 62, COL_BLUE },
+    { "eps = 276/110000 = 2.51e-3", 14, 82, COL_BLACK },
+    { "Alongamento: dl = eps * L0", 14, 102, COL_BLUE },
+    { "dl = 2.51e-3 * 305", 14, 122, COL_BLACK },
+    { "dl = 0.77 mm", 14, 142, COL_RED },
+};
+
+static const TextLine x_tra_1_pg2[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "dl = 0.77 mm", 14, 82, COL_RED },
+};
+
+static const Page x_tra_1_pages[] = {
+    { "Enunciado", "",
+      x_tra_1_pg0, COUNT(x_tra_1_pg0), 0, 0, 0 },
+    { "Resolucao", "passo a passo",
+      x_tra_1_pg1, COUNT(x_tra_1_pg1), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_tra_1_pg2, COUNT(x_tra_1_pg2), "dl = 0.77 mm", 104, 0 }
+};
+
+static const TextLine x_tra_2_pg0[] = {
+    { "Um bastao de latao (d = 10 mm) e", 14, 62, COL_BLACK },
+    { "tracionado. Que carga reduz o", 14, 82, COL_BLACK },
+    { "diametro em 2.5e-3 mm (so elastica)?", 14, 102, COL_BLACK },
+    { "E = 97 GPa, poisson = 0.34.", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_tra_2_pg1[] = {
+    { "Deformacao lateral:", 14, 62, COL_BLUE },
+    { "eps_x = dd/d = 2.5e-3/10 = 2.5e-4", 14, 82, COL_BLACK },
+    { "Deformacao axial (poisson):", 14, 102, COL_BLUE },
+    { "eps_z = eps_x/0.34 = 7.35e-4", 14, 122, COL_BLACK },
+    { "sigma = E eps_z = 97000*7.35e-4", 14, 142, COL_BLACK },
+    { "71.3 MPa", 14, 162, COL_RED },
+    { "Carga: F = sigma A, A=pi(5mm)^2", 14, 182, COL_BLUE },
+};
+
+static const TextLine x_tra_2_pg2[] = {
+    { "F = 71.3e6 * 7.854e-5", 14, 62, COL_BLACK },
+    { "F = 5600 N", 14, 82, COL_RED },
+};
+
+static const TextLine x_tra_2_pg3[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "F = 5600 N", 14, 82, COL_RED },
+};
+
+static const Page x_tra_2_pages[] = {
+    { "Enunciado", "",
+      x_tra_2_pg0, COUNT(x_tra_2_pg0), 0, 0, 0 },
+    { "Resolucao", "parte 1/2",
+      x_tra_2_pg1, COUNT(x_tra_2_pg1), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_tra_2_pg2, COUNT(x_tra_2_pg2), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_tra_2_pg3, COUNT(x_tra_2_pg3), "F = 5600 N", 104, 0 }
+};
+
+static const TextLine x_tra_3_pg0[] = {
+    { "Da curva tensao-deformacao de um", 14, 62, COL_BLACK },
+    { "latao, determine: (a) E; (b)", 14, 82, COL_BLACK },
+    { "escoamento a 0.2%; (c) carga maxima", 14, 102, COL_BLACK },
+    { "p/ d0=12.8 mm; (d) dl p/ L0=250 mm a", 14, 122, COL_BLACK },
+    { "345 MPa.", 14, 142, COL_BLACK },
+};
+
+static const TextLine x_tra_3_pg1[] = {
+    { "", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_tra_3_pg2[] = {
+    { "(a) E = inclinacao da reta inicial", 14, 62, COL_BLUE },
+    { "E = 93.8 GPa", 14, 82, COL_RED },
+    { "(b) escoamento (offset 0.2%):", 14, 102, COL_BLUE },
+    { "sigma_e = 250 MPa", 14, 122, COL_RED },
+    { "(c) LRT~450 MPa; A=pi(6.4mm)^2", 14, 142, COL_BLUE },
+    { "Fmax = 450e6*1.287e-4 = 57900 N", 14, 162, COL_BLACK },
+    { "(d) ler eps~0.06 a 345 MPa:", 14, 182, COL_BLUE },
+};
+
+static const TextLine x_tra_3_pg3[] = {
+    { "dl = 0.06*250 = 15 mm", 14, 62, COL_BLACK },
+};
+
+static const TextLine x_tra_3_pg4[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "E=93.8 GPa; sigma_e=250 MPa", 14, 82, COL_RED },
+    { "Fmax=57900 N; dl=15 mm", 14, 102, COL_RED },
+};
+
+static const Page x_tra_3_pages[] = {
+    { "Enunciado", "",
+      x_tra_3_pg0, COUNT(x_tra_3_pg0), 0, 0, 0 },
+    { "Grafico", "",
+      x_tra_3_pg1, COUNT(x_tra_3_pg1), 0, 0, draw_x_tra_3 },
+    { "Resolucao", "parte 1/2",
+      x_tra_3_pg2, COUNT(x_tra_3_pg2), 0, 0, 0 },
+    { "Resolucao", "parte 2/2",
+      x_tra_3_pg3, COUNT(x_tra_3_pg3), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_tra_3_pg4, COUNT(x_tra_3_pg4), "E=93.8G; Fmax=57900N; dl=15", 124, 0 }
+};
+
+static const TextLine x_tra_4_pg0[] = {
+    { "Corpo de prova de aco: d0 = 12.8 mm.", 14, 62, COL_BLACK },
+    { "Na fratura o diametro da secao e", 14, 82, COL_BLACK },
+    { "df = 10.7 mm. Calcule a ductilidade", 14, 102, COL_BLACK },
+    { "como reducao de area (%RA).", 14, 122, COL_BLACK },
+};
+
+static const TextLine x_tra_4_pg1[] = {
+    { "Reducao percentual de area:", 14, 62, COL_BLUE },
+    { "%RA = (d0^2 - df^2)/d0^2 * 100", 14, 82, COL_BLACK },
+    { "(12.8^2 - 10.7^2)/12.8^2 * 100", 14, 102, COL_RED },
+    { "(163.84 - 114.49)/163.84 * 100", 14, 122, COL_RED },
+    { "%RA = 30 %", 14, 142, COL_RED },
+};
+
+static const TextLine x_tra_4_pg2[] = {
+    { "Resposta final:", 14, 62, COL_BLUE },
+    { "%RA = 30%", 14, 82, COL_RED },
+};
+
+static const Page x_tra_4_pages[] = {
+    { "Enunciado", "",
+      x_tra_4_pg0, COUNT(x_tra_4_pg0), 0, 0, 0 },
+    { "Resolucao", "passo a passo",
+      x_tra_4_pg1, COUNT(x_tra_4_pg1), 0, 0, 0 },
+    { "Resultado", "Final",
+      x_tra_4_pg2, COUNT(x_tra_4_pg2), "%RA = 30%", 104, 0 }
 };
 
 static const TextLine x_gra_1_pg0[] = {
@@ -1011,38 +2281,69 @@ static const Page cal_6_31_pages[] = {
       cal_6_31_pg3, COUNT(cal_6_31_pg3), "%RA=73.4%; %AL=42%", 104, 0 }
 };
 
+static const Exercise exs_ligacoes[] = {
+    { "Ligacoes primarias", x_lig_1_pages, COUNT(x_lig_1_pages) },
+    { "Dispositivo multimaterial", x_lig_2_pages, COUNT(x_lig_2_pages) },
+};
+
 static const Exercise exs_estruturas[] = {
     { "Ex 1: Vc do Al (CFC)", x_est_1_pages, COUNT(x_est_1_pages) },
     { "Ex 2: R do V (CCC)", x_est_2_pages, COUNT(x_est_2_pages) },
     { "Ex 3: FEA da CFC", x_est_3_pages, COUNT(x_est_3_pages) },
+    { "P2 Q1: Parametros CCC/CFC", x_est_4_pages, COUNT(x_est_4_pages) },
+    { "P2 Q2: FEA CCC e CFC", x_est_5_pages, COUNT(x_est_5_pages) },
+    { "Ex 3: Rodio CFC ou CCC", x_est_6_pages, COUNT(x_est_6_pages) },
 };
 
 static const Exercise exs_densidade[] = {
     { "Ex 1: Densidade do Al", x_den_1_pages, COUNT(x_den_1_pages) },
+    { "P2 Q3: Identificar metal", x_den_2_pages, COUNT(x_den_2_pages) },
+    { "P2 Q4: Estrutura de M e N", x_den_3_pages, COUNT(x_den_3_pages) },
 };
 
 static const Exercise exs_difusao[] = {
     { "Ex 1: H em chapa de Pd", x_dif_1_pages, COUNT(x_dif_1_pages) },
     { "Ex 2: Profundidade x", x_dif_2_pages, COUNT(x_dif_2_pages) },
+    { "Ex 3: Lamina de Pd (6 mm)", x_dif_3_pages, COUNT(x_dif_3_pages) },
+    { "Ex 4: Fluxo de C no Fe", x_dif_4_pages, COUNT(x_dif_4_pages) },
+    { "Ex 5: Profundidade (N a 1200C)", x_dif_5_pages, COUNT(x_dif_5_pages) },
 };
 
 static const Exercise exs_arrhenius[] = {
     { "Ex 1: D do C no Cr", x_arr_1_pages, COUNT(x_arr_1_pages) },
     { "Ex 2: Q e D0 (Fe em Ni)", x_arr_2_pages, COUNT(x_arr_2_pages) },
+    { "Ex 3: D do Fe-Ni a 1100 C", x_arr_3_pages, COUNT(x_arr_3_pages) },
+    { "Ex 4: D do Mg no Al", x_arr_4_pages, COUNT(x_arr_4_pages) },
+    { "Ex 5: Temperatura (Cu no Ni)", x_arr_5_pages, COUNT(x_arr_5_pages) },
 };
 
 static const Exercise exs_diagramas[] = {
     { "Ex 1: Eutetico Pb-Sn", x_dia_1_pages, COUNT(x_dia_1_pages) },
+    { "P4 Q2: Eutetico Pb-Sn", x_dia_2_pages, COUNT(x_dia_2_pages) },
+    { "P4 Q3: Acos 1045 e 1086", x_dia_3_pages, COUNT(x_dia_3_pages) },
+    { "Prata de lei (Ag-Cu)", x_dia_4_pages, COUNT(x_dia_4_pages) },
 };
 
 static const Exercise exs_alavanca[] = {
     { "Ex 1: Alavanca Cu-Ni", x_ala_1_pages, COUNT(x_ala_1_pages) },
+    { "P4 Q1: Fases no Cu-Ni", x_ala_2_pages, COUNT(x_ala_2_pages) },
 };
 
 static const Exercise exs_mecanicas[] = {
     { "Ex 1: Modulo E (A e B)", x_mec_1_pages, COUNT(x_mec_1_pages) },
     { "Ex 2: Ductilidade %AL", x_mec_2_pages, COUNT(x_mec_2_pages) },
     { "Ex 3: Resiliencia Ur", x_mec_3_pages, COUNT(x_mec_3_pages) },
+    { "Ex 4: Escoamento (A e B)", x_mec_4_pages, COUNT(x_mec_4_pages) },
+    { "Ex 5: Resistencia LRT (A e B)", x_mec_5_pages, COUNT(x_mec_5_pages) },
+    { "Ex 6: Tenacidade e dureza", x_mec_6_pages, COUNT(x_mec_6_pages) },
+    { "Ex 7: Deformacao a 150 MPa", x_mec_7_pages, COUNT(x_mec_7_pages) },
+};
+
+static const Exercise exs_tracao[] = {
+    { "6.1: Alongamento do Cu", x_tra_1_pages, COUNT(x_tra_1_pages) },
+    { "6.2: Carga no latao (Poisson)", x_tra_2_pages, COUNT(x_tra_2_pages) },
+    { "6.3: Curva do latao", x_tra_3_pages, COUNT(x_tra_3_pages) },
+    { "6.4: Ductilidade (%RA)", x_tra_4_pages, COUNT(x_tra_4_pages) },
 };
 
 static const Exercise exs_graficos[] = {
@@ -1059,6 +2360,7 @@ static const Exercise exs_callister[] = {
 };
 
 static const Topic exerc_topics[] = {
+    { "Ligacoes", exs_ligacoes, COUNT(exs_ligacoes) },
     { "Estruturas", exs_estruturas, COUNT(exs_estruturas) },
     { "Densidade", exs_densidade, COUNT(exs_densidade) },
     { "Difusao", exs_difusao, COUNT(exs_difusao) },
@@ -1066,6 +2368,7 @@ static const Topic exerc_topics[] = {
     { "Diagramas", exs_diagramas, COUNT(exs_diagramas) },
     { "Alavanca", exs_alavanca, COUNT(exs_alavanca) },
     { "Mecanicas", exs_mecanicas, COUNT(exs_mecanicas) },
+    { "Tracao", exs_tracao, COUNT(exs_tracao) },
     { "Graficos", exs_graficos, COUNT(exs_graficos) },
     { "Callister", exs_callister, COUNT(exs_callister) },
 };

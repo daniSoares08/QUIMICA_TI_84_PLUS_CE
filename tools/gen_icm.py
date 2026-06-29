@@ -164,26 +164,114 @@ def fig621():
     return ops
 
 
+def brass_curve():
+    """Curva tensao-deformacao do latao (Exemplo 6.3): E, escoamento e LRT."""
+    ops = [("axes", 55, 56, 295, 205)]
+    ops.append(("text", "sig", 30, 50, "gr"))
+    ops.append(("text", "eps", 270, 210, "gr"))
+    pts = [(55, 205), (66, 132), (96, 100), (150, 84), (205, 96)]
+    for i in range(len(pts) - 1):
+        ops.append(("line", pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1], "b"))
+    ops.append(("dot", 66, 132, "r"))    # escoamento (~250 MPa)
+    ops.append(("dot", 150, 84, "r"))    # LRT (~450 MPa)
+    ops.append(("text", "E", 58, 168, "k"))
+    ops.append(("text", "se", 72, 120, "r"))
+    ops.append(("text", "LRT", 150, 70, "r"))
+    return ops
+
+
+def fe_c_eutectoid():
+    """Trecho do diagrama Fe-Fe3C com ponto eutetoide e os acos 1045 e 1086."""
+    ops = [("axes", 55, 56, 295, 205)]
+    ops.append(("text", "T", 38, 50, "gr"))
+    ops.append(("text", "%C", 268, 210, "gr"))
+    # x: 0..1.2 %C over 55..295 ; eutetoide 0.76%C, 727C
+    xe, ye = 207, 150               # eutetoide (0.76 %C)
+    ops.append(("line", 55, 92, xe, ye, "b"))     # linha A3 (desce ate eutetoide)
+    ops.append(("line", xe, ye, 262, 110, "b"))   # linha Acm (sobe a direita)
+    ops.append(("line", 90, ye, 270, ye, "k"))    # isoterma eutetoide 727C
+    ops.append(("dot", xe, ye, "r"))
+    ops.append(("text", "g", 150, 96, "gr"))      # austenita (gama)
+    ops.append(("text", "727C", 210, 142, "k"))
+    ops.append(("text", "0.76", 196, 158, "r"))
+    # acos 1045 (0.45%C -> x=145) e 1086 (0.86%C -> x=227)
+    ops.append(("dash", 145, 150, 145, 205, "gr"))
+    ops.append(("dash", 227, 150, 227, 205, "gr"))
+    ops.append(("text", "1045", 120, 192, "k"))
+    ops.append(("text", "1086", 230, 178, "k"))
+    return ops
+
+
+def agcu_diagram():
+    """Diagrama eutetico Cu-Ag com a vertical 90% Ag e os pontos A/B/C."""
+    ops = [("axes", 55, 56, 295, 205)]
+    ops.append(("text", "T", 38, 50, "gr"))
+    ops.append(("text", "%Ag", 262, 210, "gr"))
+    # x: 0..100 %Ag over 55..295 ; y: 400..1100C over 205..58
+    xeut, yeut = 227, 125           # eutetico 71.9%Ag, 779C
+    xa, xb = 74, 274                # 8% Ag (a) e 91.2% Ag (b) no eutetico
+    # liquidus: Cu(0%,1085C) -> eutetico -> Ag(100%,962C)
+    ops.append(("line", 55, 61, xeut, yeut, "b"))
+    ops.append(("line", xeut, yeut, 295, 87, "b"))
+    # solidus / limites das fases solidas
+    ops.append(("line", 55, 61, xa, yeut, "r"))
+    ops.append(("line", 295, 87, xb, yeut, "r"))
+    ops.append(("line", xa, yeut, xb, yeut, "k"))   # isoterma eutetica 779C
+    ops.append(("line", xa, yeut, 66, 205, "r"))    # solvus alpha
+    ops.append(("line", xb, yeut, 285, 205, "r"))   # solvus beta
+    ops.append(("dot", xeut, yeut, "r"))
+    # vertical da liga 90% Ag e os tres pontos
+    ops.append(("dash", 271, 60, 271, 200, "gr"))
+    ops.append(("dot", 271, 62, "k"))
+    ops.append(("dot", 271, 121, "k"))
+    ops.append(("dot", 271, 163, "k"))
+    ops.append(("text", "C", 276, 58, "k"))
+    ops.append(("text", "B", 276, 114, "k"))
+    ops.append(("text", "A", 276, 158, "k"))
+    ops.append(("text", "L", 150, 80, "b"))
+    ops.append(("text", "a", 70, 180, "r"))
+    ops.append(("text", "b", 280, 150, "r"))
+    return ops
+
+
+AB_CURVES = [
+    ([(55, 205), (120, 120), (160, 95), (210, 70), (250, 100)], "b"),
+    ([(55, 205), (95, 150), (130, 135), (180, 120), (235, 145)], "r"),
+]
+
+
 GRAPHS = {
     "x_est_1": cfc_cell(),
     "x_est_2": ccc_cell(),
     "x_est_3": cfc_cell(),
+    "x_est_5": ccc_cell(),
+    "x_est_6": cfc_cell(),
     "x_den_1": cfc_cell(),
+    "x_den_2": cfc_cell(),
     "x_dif_1": conc_gradient(),
     "x_dif_2": conc_gradient(),
+    "x_dif_3": conc_gradient(),
+    "x_dif_4": conc_gradient(),
+    "x_dif_5": conc_gradient(),
     "x_arr_2": arrhenius_line(),
+    "x_arr_3": arrhenius_line(),
+    "x_arr_4": arrhenius_line(),
+    "x_arr_5": arrhenius_line(),
     "x_dia_1": phase_eutectic(),
+    "x_dia_2": phase_eutectic(),
+    "x_dia_3": fe_c_eutectoid(),
+    "x_dia_4": agcu_diagram(),
     "x_ala_1": phase_iso(),
-    "x_mec_1": stress_strain([
-        ([(55, 205), (120, 120), (160, 95), (210, 70), (250, 100)], "b"),
-        ([(55, 205), (95, 150), (130, 135), (180, 120), (235, 145)], "r"),
-    ]),
-    "x_mec_3": stress_strain([
-        ([(55, 205), (120, 120), (160, 95), (210, 70), (250, 100)], "b"),
-    ]),
+    "x_ala_2": phase_iso(),
+    "x_mec_1": stress_strain(AB_CURVES),
+    "x_mec_3": stress_strain([AB_CURVES[0]]),
+    "x_mec_4": stress_strain(AB_CURVES),
+    "x_mec_5": stress_strain(AB_CURVES),
+    "x_mec_7": stress_strain(AB_CURVES),
     "x_gra_1": stress_strain([
         ([(55, 205), (110, 120), (150, 90), (200, 72), (245, 95)], "b"),
     ]),
+    "x_tra_3": brass_curve(),
     "cal_6_9": fig621(),
     "cal_6_25": fig621(),
     "cal_6_27": fig621(),
@@ -195,6 +283,62 @@ GRAPHS = {
 # ----------------------------------------------------------------------------
 
 EXERCISES = [
+    # ----- Ligacoes quimicas (Parte 1) -----
+    {"id": "x_lig_1", "topic": "Ligacoes", "title": "Ligacoes primarias", "graph": None,
+     "statement": [
+         "Descreva as ligacoes quimicas",
+         "primarias. Para cada uma indique os",
+         "elementos envolvidos, como os",
+         "eletrons interagem e as classes de",
+         "materiais em que ocorre.",
+     ],
+     "solution": [
+         "# Ligacao metalica:",
+         "elementos: metais.",
+         "eletrons livres formam um mar de",
+         "eletrons que mantem a estrutura.",
+         "ocorre em metais e ligas metalicas.",
+         "# Ligacao covalente:",
+         "elementos: ametais.",
+         "atomos compartilham eletrons para",
+         "ficarem estaveis.",
+         "ocorre em polimeros e ceramicas.",
+         "# Ligacao ionica:",
+         "elementos: metal + ametal.",
+         "um atomo doa e o outro recebe",
+         "eletron (atracao entre ions).",
+         "ocorre em ceramicas e sais.",
+     ],
+     "answer": ["Metalica: mar de eletrons (metais)",
+                "Covalente: compartilha (polimero)",
+                "Ionica: doa/recebe (ceramica)"],
+     "final": "3 ligacoes primarias"},
+
+    {"id": "x_lig_2", "topic": "Ligacoes", "title": "Dispositivo multimaterial",
+     "graph": None,
+     "statement": [
+         "Proponha um dispositivo do jogo que",
+         "combine metal, polimero e ceramica.",
+         "Indique a classe de cada componente",
+         "e o tipo de ligacao quimica.",
+     ],
+     "solution": [
+         "# Dispositivo: uma lanterna.",
+         "ajuda o jogador a ver no escuro.",
+         "# Corpo - metal:",
+         "ligacao metalica (da resistencia).",
+         "# Pegada - polimero:",
+         "ligacao covalente (isola e ajuda",
+         "a segurar na mao).",
+         "# Lente - vidro (ceramica):",
+         "ligacoes ionica e covalente",
+         "(deixa a luz passar).",
+     ],
+     "answer": ["Lanterna: metal (metalica),",
+                "polimero (covalente),",
+                "vidro (ionica + covalente)"],
+     "final": "Lanterna metal/polim/vidro"},
+
     # ----- Estruturas Cristalinas -----
     {"id": "x_est_1", "topic": "Estruturas", "title": "Ex 1: Vc do Al (CFC)",
      "statement": [
@@ -251,6 +395,68 @@ EXERCISES = [
      ],
      "answer": ["FEA = 0.74"], "final": "FEA(CFC) = 0.74"},
 
+    {"id": "x_est_4", "topic": "Estruturas", "title": "P2 Q1: Parametros CCC/CFC",
+     "graph": None,
+     "statement": [
+         "Complete os parametros das celulas",
+         "unitarias CCC e CFC: numero de",
+         "atomos n, volume Vc e a relacao",
+         "entre aresta a e raio R.",
+     ],
+     "solution": [
+         "# CCC (corpo centrado):",
+         "n = 2 atomos por celula",
+         "a = 4R / raiz(3)",
+         "Vc = a^3 = (4R/raiz3)^3",
+         "# CFC (faces centradas):",
+         "n = 4 atomos por celula",
+         "a = 2R raiz(2)",
+         "Vc = a^3 = (2R raiz2)^3",
+     ],
+     "answer": ["CCC: n=2, a=4R/raiz3",
+                "CFC: n=4, a=2R raiz2", "Vc = a^3"],
+     "final": "CCC n2; CFC n4; Vc=a^3"},
+
+    {"id": "x_est_5", "topic": "Estruturas", "title": "P2 Q2: FEA CCC e CFC",
+     "statement": [
+         "Defina e calcule o fator de",
+         "empacotamento atomico (FEA) das",
+         "estruturas CCC e CFC.",
+     ],
+     "solution": [
+         "# FEA = volume de atomos / Vc.",
+         "# CCC: n=2, a = 4R/raiz3",
+         "Vat = 2*(4/3)pi R^3",
+         "Vc = (4R/raiz3)^3 = 12.32 R^3",
+         "FEA = 8.378 R^3 / 12.32 R^3",
+         "= FEA(CCC) = 0.68",
+         "# CFC: n=4, a = 2R raiz2",
+         "FEA(CFC) = pi/(3 raiz2)",
+         "= FEA(CFC) = 0.74",
+     ],
+     "answer": ["FEA(CCC) = 0.68", "FEA(CFC) = 0.74"],
+     "final": "CCC 0.68; CFC 0.74"},
+
+    {"id": "x_est_6", "topic": "Estruturas", "title": "Ex 3: Rodio CFC ou CCC",
+     "statement": [
+         "O rodio tem raio R = 0.1345 nm,",
+         "massa A = 102.91 g/mol e densidade",
+         "rho = 12.41 g/cm3. Determine se a",
+         "estrutura e CFC ou CCC.",
+     ],
+     "solution": [
+         "# Teste cada estrutura por rho=nA/(VcNa)",
+         "R = 1.345e-8 cm",
+         "# CCC (n=2): a = 4R/raiz3 = 3.106e-8",
+         "rho_CCC = 11.4 g/cm3 (nao bate)",
+         "# CFC (n=4): a = 2R raiz2 = 3.804e-8",
+         "Vc = 5.506e-23 cm3",
+         "rho_CFC = 4*102.91/(5.506e-23*6.022e23)",
+         "= rho_CFC = 12.41 g/cm3 -> CFC",
+     ],
+     "answer": ["rho_CFC = 12.41 g/cm3 (confere)", "Estrutura = CFC"],
+     "final": "Rodio e CFC"},
+
     # ----- Densidade -----
     {"id": "x_den_1", "topic": "Densidade", "title": "Ex 1: Densidade do Al",
      "statement": [
@@ -269,6 +475,47 @@ EXERCISES = [
          "= rho = 2.70 g/cm3",
      ],
      "answer": ["rho = 2.70 g/cm3"], "final": "rho = 2.70 g/cm3"},
+
+    {"id": "x_den_2", "topic": "Densidade", "title": "P2 Q3: Identificar metal",
+     "statement": [
+         "Uma tabela traz estrutura, massa e",
+         "raio de varios metais (A a L). Pela",
+         "densidade teorica, identifique o",
+         "metal C: CFC, A = 63.546 g/mol,",
+         "R = 0.1278 nm.",
+     ],
+     "solution": [
+         "# Densidade: rho = n A / (Vc Na)",
+         "# CFC: n=4, a = 2R raiz2 (R em cm)",
+         "R = 1.278e-8 cm; a = 3.614e-8 cm",
+         "Vc = a^3 = 4.721e-23 cm3",
+         "rho = 4*63.546/(4.721e-23*6.022e23)",
+         "= rho = 8.94 g/cm3",
+         "# Compara com a literatura:",
+         "= bate com o cobre (Cu ~ 8.96)",
+     ],
+     "answer": ["rho = 8.94 g/cm3", "Metal C = cobre (Cu)"],
+     "final": "Metal C = Cu (8.94 g/cm3)"},
+
+    {"id": "x_den_3", "topic": "Densidade", "title": "P2 Q4: Estrutura de M e N",
+     "graph": None,
+     "statement": [
+         "Identifique a estrutura (CCC ou CFC)",
+         "de dois metais pela densidade:",
+         "M: rho=5.96, A=50.9, R=0.132 nm;",
+         "N: rho=13.43, A=107.6, R=0.133 nm.",
+     ],
+     "solution": [
+         "# Calcula rho nas duas hipoteses.",
+         "# Metal M (R=1.32e-8 cm):",
+         "CCC: a=4R/raiz3=3.048e-8; rho=5.96",
+         "= bate em CCC -> M e CCC",
+         "# Metal N (R=1.33e-8 cm):",
+         "CFC: a=2R raiz2=3.762e-8; rho=13.4",
+         "= bate em CFC -> N e CFC",
+     ],
+     "answer": ["Metal M = CCC (rho=5.96)", "Metal N = CFC (rho=13.4)"],
+     "final": "M = CCC; N = CFC"},
 
     # ----- Difusao (Fick) -----
     {"id": "x_dif_1", "topic": "Difusao", "title": "Ex 1: H em chapa de Pd",
@@ -305,6 +552,61 @@ EXERCISES = [
          "= x = 2.775e-3 m = 2.775 mm",
      ],
      "answer": ["x = 2.775 mm"], "final": "x = 2.775 mm"},
+
+    {"id": "x_dif_3", "topic": "Difusao", "title": "Ex 3: Lamina de Pd (6 mm)",
+     "statement": [
+         "H2 difunde numa lamina de Pd de",
+         "6 mm e area 0.25 m2, a 600 C.",
+         "D = 1.7e-8 m2/s e as concentracoes",
+         "valem 2.0 e 0.4 kg/m3. Ache a massa",
+         "por hora.",
+     ],
+     "solution": [
+         "# 1a Lei de Fick (fluxo):",
+         "J = D dC/dx",
+         "J = 1.7e-8*(2.0-0.4)/0.006",
+         "= J = 4.533e-6 kg/(m2 s)",
+         "# Massa em 1 h (t=3600 s):",
+         "M = J A t = 4.533e-6*0.25*3600",
+         "= M = 4.08e-3 kg/h",
+     ],
+     "answer": ["M = 4.08e-3 kg/h"], "final": "M = 4.08e-3 kg/h"},
+
+    {"id": "x_dif_4", "topic": "Difusao", "title": "Ex 4: Fluxo de C no Fe",
+     "statement": [
+         "Placa de Fe a 700 C entre uma",
+         "atmosfera rica e outra pobre em C.",
+         "A 5 e 10 mm a concentracao vale 1.2",
+         "e 0.8 kg/m3. D = 3e-11 m2/s.",
+         "Ache o fluxo de difusao do C.",
+     ],
+     "solution": [
+         "# 1a Lei de Fick (regime estacionario):",
+         "J = D (CA - CB)/(xB - xA)",
+         "dx = (10 - 5) mm = 0.005 m",
+         "J = 3e-11*(1.2 - 0.8)/0.005",
+         "J = 3e-11 * 80",
+         "= J = 2.4e-9 kg/(m2 s)",
+     ],
+     "answer": ["J = 2.4e-9 kg/(m2 s)"], "final": "J = 2.4e-9 kg/m2s"},
+
+    {"id": "x_dif_5", "topic": "Difusao", "title": "Ex 5: Profundidade (N a 1200C)",
+     "statement": [
+         "Chapa de aco a 1200 C com N2 nos",
+         "dois lados. D = 6e-11 m2/s, fluxo",
+         "J = 1.2e-7 kg/(m2 s). C cai de 4.0 a",
+         "2.0 kg/m3. Ache a profundidade x",
+         "(perfil linear).",
+     ],
+     "solution": [
+         "# Da 1a Lei de Fick isola-se x:",
+         "J = D (C0 - Cx)/x",
+         "x = D (C0 - Cx)/J",
+         "x = 6e-11*(4.0 - 2.0)/1.2e-7",
+         "x = 1.2e-10/1.2e-7",
+         "= x = 1.0e-3 m = 1.0 mm",
+     ],
+     "answer": ["x = 1.0 mm"], "final": "x = 1.0 mm"},
 
     # ----- Arrhenius -----
     {"id": "x_arr_1", "topic": "Arrhenius", "title": "Ex 1: D do C no Cr",
@@ -344,6 +646,58 @@ EXERCISES = [
      "answer": ["Q = 252.5 kJ/mol", "D0 = 2.17e-5 m2/s"],
      "final": "Q=252.5 kJ/mol; D0=2.17e-5"},
 
+    {"id": "x_arr_3", "topic": "Arrhenius", "title": "Ex 3: D do Fe-Ni a 1100 C",
+     "statement": [
+         "Para o Fe no Ni: D=9.4e-16 a 1273 K",
+         "e D=2.4e-14 a 1473 K. Qual o valor",
+         "de D a 1100 C (1373 K)?",
+     ],
+     "solution": [
+         "# Reta lnD vs 1/T entre os 2 pontos:",
+         "lnD = lnD1 - (Q/R)(1/T - 1/T1)",
+         "(Q/R) = ln(D2/D1)/(1/T1 - 1/T2)",
+         "= 30377 K (inclinacao)",
+         "1/1373 - 1/1273 = -5.72e-5",
+         "lnD = ln(9.4e-16) + 30377*5.72e-5",
+         "= D = 5.34e-15 m2/s",
+     ],
+     "answer": ["D(1373 K) = 5.34e-15 m2/s"],
+     "final": "D = 5.34e-15 m2/s"},
+
+    {"id": "x_arr_4", "topic": "Arrhenius", "title": "Ex 4: D do Mg no Al",
+     "statement": [
+         "Calcule o coeficiente de difusao do",
+         "magnesio no aluminio a 550 C.",
+         "Dados (tabela): D0 = 1.2e-4 m2/s e",
+         "Q = 131 kJ/mol.",
+     ],
+     "solution": [
+         "# Equacao de Arrhenius:",
+         "D = D0 exp(-Q/(R T))",
+         "T = 550 + 273 = 823 K",
+         "Q/(R T) = 131000/(8.314*823) = 19.15",
+         "D = 1.2e-4 * exp(-19.15)",
+         "= D = 5.8e-13 m2/s",
+     ],
+     "answer": ["D = 5.8e-13 m2/s"], "final": "D = 5.8e-13 m2/s"},
+
+    {"id": "x_arr_5", "topic": "Arrhenius", "title": "Ex 5: Temperatura (Cu no Ni)",
+     "statement": [
+         "A que temperatura a difusao do cobre",
+         "no niquel tem D = 6.5e-17 m2/s?",
+         "Dados (tabela): D0 = 2.7e-5 m2/s e",
+         "Q = 256 kJ/mol.",
+     ],
+     "solution": [
+         "# Isola T na equacao de Arrhenius:",
+         "T = Q / (R ln(D0/D))",
+         "ln(D0/D) = ln(2.7e-5/6.5e-17)",
+         "= 26.75",
+         "T = 256000/(8.314*26.75)",
+         "= T = 1151 K = 878 C",
+     ],
+     "answer": ["T = 1151 K (878 C)"], "final": "T = 1151 K = 878 C"},
+
     # ----- Diagramas de fase -----
     {"id": "x_dia_1", "topic": "Diagramas", "title": "Ex 1: Eutetico Pb-Sn",
      "statement": [
@@ -361,6 +715,75 @@ EXERCISES = [
      ],
      "answer": ["T = 183 C; 61.9 wt% Sn", "L -> alpha + beta"],
      "final": "Eutetico: 183 C; 61.9% Sn"},
+
+    {"id": "x_dia_2", "topic": "Diagramas", "title": "P4 Q2: Eutetico Pb-Sn",
+     "statement": [
+         "No diagrama eutetico Pb-Sn: (a) qual",
+         "a temperatura e a composicao",
+         "euteticas; (b) escreva a reacao",
+         "eutetica; (c) o que sao ligas hipo e",
+         "hipereuteticas.",
+     ],
+     "solution": [
+         "# (a) Ponto eutetico (leitura):",
+         "T = 183 C; composicao = 61.9 wt% Sn",
+         "# (b) Reacao no resfriamento lento:",
+         "L(61.9) -> alpha(18.3) + beta(97.8)",
+         "a alpha e rica em Pb; beta em Sn",
+         "# (c) Em relacao a composicao eutetica:",
+         "hipo: menos Sn que 61.9% (a esquerda)",
+         "hiper: mais Sn que 61.9% (a direita)",
+     ],
+     "answer": ["183 C e 61.9 wt% Sn",
+                "L -> alpha + beta",
+                "hipo<61.9%<hiper"],
+     "final": "Eutetico 183C/61.9% Sn"},
+
+    {"id": "x_dia_3", "topic": "Diagramas", "title": "P4 Q3: Acos 1045 e 1086",
+     "statement": [
+         "Dois acos: 1045 (0.45% C) e 1086",
+         "(0.86% C). (a) classifique cada um;",
+         "(b) de o ponto eutetoide do Fe-Fe3C;",
+         "(c) qual tem maior dureza?",
+     ],
+     "solution": [
+         "# Ponto eutetoide: 0.76% C, 727 C.",
+         "# (a) Comparando com 0.76% C:",
+         "1045 (0.45%) < 0.76 -> hipoeutetoide",
+         "1086 (0.86%) > 0.76 -> hipereutetoide",
+         "# (c) Mais carbono = mais cementita,",
+         "logo mais duro:",
+         "= o aco 1086 tem maior dureza",
+     ],
+     "answer": ["1045 hipoeutetoide; 1086 hiper",
+                "eutetoide: 0.76% C e 727 C",
+                "mais duro: 1086"],
+     "final": "1086 mais duro; eut 0.76%C"},
+
+    {"id": "x_dia_4", "topic": "Diagramas", "title": "Prata de lei (Ag-Cu)",
+     "statement": [
+         "Uma prata de lei (90% Ag, 10% Cu) e",
+         "aquecida a 600, 800 e 1100 C. Use o",
+         "diagrama Ag-Cu (eutetico 71.9% Ag,",
+         "779 C) e ache as fases e proporcoes",
+         "em cada temperatura.",
+     ],
+     "solution": [
+         "# 1100 C: acima do liquidus.",
+         "= so liquido (100% L)",
+         "# 800 C: regiao beta + L.",
+         "CL~75% Ag, Cb~92% Ag; C0=90%",
+         "wL=(92-90)/(92-75)=0.13 -> wL~13%",
+         "= beta ~87% ; L ~13%",
+         "# 600 C: regiao alpha + beta.",
+         "Ca~3% Ag, Cb~96% Ag; C0=90%",
+         "wa=(96-90)/(96-3)=0.06 -> alpha~6%",
+         "= beta ~94% ; alpha ~6%",
+     ],
+     "answer": ["1100C: 100% L",
+                "800C: ~87% beta + ~13% L",
+                "600C: ~94% beta + ~6% alpha"],
+     "final": "L; b+L; a+b (3 temps)"},
 
     # ----- Regra da alavanca -----
     {"id": "x_ala_1", "topic": "Alavanca", "title": "Ex 1: Alavanca Cu-Ni",
@@ -381,6 +804,30 @@ EXERCISES = [
          "= wa = 0.273 (27.3%)",
      ],
      "answer": ["wL = 72.7%; w(alpha) = 27.3%"],
+     "final": "wL=72.7%; wa=27.3%"},
+
+    {"id": "x_ala_2", "topic": "Alavanca", "title": "P4 Q1: Fases no Cu-Ni",
+     "statement": [
+         "No diagrama isomorfo Cu-Ni explique",
+         "as regioes e o passo a passo da",
+         "regra da alavanca. Aplique a uma",
+         "liga 35% Ni a 1250 C (regiao alpha+L,",
+         "CL=32 e Calpha=43 wt% Ni).",
+     ],
+     "solution": [
+         "# Regioes: acima do liquidus so L;",
+         "abaixo do solidus so alpha; entre",
+         "as duas linhas coexistem alpha + L.",
+         "# Passos da regra da alavanca:",
+         "1) tracar a linha de amarracao em T;",
+         "2) ler CL e Calpha nas extremidades;",
+         "3) a fracao usa o braco oposto.",
+         "# Aplicando (C0=35):",
+         "wL = (Ca-C0)/(Ca-CL) = (43-35)/11",
+         "= wL = 0.727; w(alpha) = 0.273",
+     ],
+     "answer": ["alpha+L entre liquidus e solidus",
+                "wL = 72.7%; w(alpha) = 27.3%"],
      "final": "wL=72.7%; wa=27.3%"},
 
     # ----- Propriedades mecanicas -----
@@ -441,6 +888,163 @@ EXERCISES = [
      ],
      "answer": ["Ur(A) = 0.653 MJ/m3", "Ur(B) = 0.189 MJ/m3"],
      "final": "Ur: A=0.653; B=0.189 MJ/m3"},
+
+    {"id": "x_mec_4", "topic": "Mecanicas", "title": "Ex 4: Escoamento (A e B)",
+     "statement": [
+         "No estudo de caso, leia a tensao",
+         "limite de escoamento (sigma_e) dos",
+         "dois materiais pela reta a 0.2% e",
+         "compare.",
+     ],
+     "solution": [
+         "# sigma_e = tensao no offset de 0.2%",
+         "(reta paralela a parte elastica).",
+         "# Material A (do grafico):",
+         "sigma_e(A) = 280 MPa",
+         "# Material B (do grafico):",
+         "sigma_e(B) = 275 MPa",
+         "= A e B tem escoamento parecido",
+     ],
+     "answer": ["sigma_e(A) = 280 MPa",
+                "sigma_e(B) = 275 MPa"],
+     "final": "se: A=280; B=275 MPa"},
+
+    {"id": "x_mec_5", "topic": "Mecanicas", "title": "Ex 5: Resistencia LRT (A e B)",
+     "statement": [
+         "Determine a tensao limite de",
+         "resistencia a tracao (LRT) dos",
+         "materiais A e B, lendo o pico de",
+         "cada curva, e compare.",
+     ],
+     "solution": [
+         "# LRT = tensao maxima da curva.",
+         "# Material A:",
+         "LRT(A) = 370 MPa",
+         "# Material B:",
+         "LRT(B) = 410 MPa",
+         "= B suporta tensao maior que A",
+     ],
+     "answer": ["LRT(A) = 370 MPa", "LRT(B) = 410 MPa",
+                "B mais resistente"],
+     "final": "LRT: A=370; B=410 MPa"},
+
+    {"id": "x_mec_6", "topic": "Mecanicas", "title": "Ex 6: Tenacidade e dureza",
+     "graph": None,
+     "statement": [
+         "Compare a tenacidade e a dureza dos",
+         "materiais A e B a partir das curvas",
+         "tensao-deformacao (A: mais ductil;",
+         "B: mais resistente).",
+     ],
+     "solution": [
+         "# Tenacidade = area sob a curva.",
+         "A e bem mais ductil (16% x 9.8%),",
+         "entao tem area maior:",
+         "= A e mais tenaz",
+         "# Dureza acompanha a resistencia.",
+         "B tem maior LRT e modulo:",
+         "= B e mais duro",
+     ],
+     "answer": ["Mais tenaz: A (mais ductil)",
+                "Mais duro: B (maior LRT)"],
+     "final": "A mais tenaz; B mais duro"},
+
+    {"id": "x_mec_7", "topic": "Mecanicas", "title": "Ex 7: Deformacao a 150 MPa",
+     "statement": [
+         "Qual material sofre deformacao",
+         "elastica de no maximo 1.0e-3 quando",
+         "submetido a 150 MPa? (E_A = 60 GPa,",
+         "E_B = 200 GPa).",
+     ],
+     "solution": [
+         "# Deformacao elastica: eps = sigma/E",
+         "# Material A:",
+         "eps = 150/60000 = 2.5e-3 (passa de 1e-3)",
+         "# Material B:",
+         "eps = 150/200000 = 7.5e-4",
+         "= 7.5e-4 < 1.0e-3 -> Material B",
+     ],
+     "answer": ["eps_A = 2.5e-3; eps_B = 7.5e-4",
+                "Material B (fica < 1.0e-3)"],
+     "final": "Material B (eps=7.5e-4)"},
+
+    # ----- Ensaio de tracao (exemplos Callister 6.1-6.4) -----
+    {"id": "x_tra_1", "topic": "Tracao", "title": "6.1: Alongamento do Cu",
+     "graph": None,
+     "statement": [
+         "Um pedaco de cobre com 305 mm e",
+         "tracionado com tensao de 276 MPa.",
+         "Se a deformacao e so elastica, qual",
+         "o alongamento? (E_Cu = 110 GPa)",
+     ],
+     "solution": [
+         "# Deformacao elastica: eps = sigma/E",
+         "eps = 276/110000 = 2.51e-3",
+         "# Alongamento: dl = eps * L0",
+         "dl = 2.51e-3 * 305",
+         "= dl = 0.77 mm",
+     ],
+     "answer": ["dl = 0.77 mm"], "final": "dl = 0.77 mm"},
+
+    {"id": "x_tra_2", "topic": "Tracao", "title": "6.2: Carga no latao (Poisson)",
+     "graph": None,
+     "statement": [
+         "Um bastao de latao (d = 10 mm) e",
+         "tracionado. Que carga reduz o",
+         "diametro em 2.5e-3 mm (so elastica)?",
+         "E = 97 GPa, poisson = 0.34.",
+     ],
+     "solution": [
+         "# Deformacao lateral:",
+         "eps_x = dd/d = 2.5e-3/10 = 2.5e-4",
+         "# Deformacao axial (poisson):",
+         "eps_z = eps_x/0.34 = 7.35e-4",
+         "sigma = E eps_z = 97000*7.35e-4",
+         "= 71.3 MPa",
+         "# Carga: F = sigma A, A=pi(5mm)^2",
+         "F = 71.3e6 * 7.854e-5",
+         "= F = 5600 N",
+     ],
+     "answer": ["F = 5600 N"], "final": "F = 5600 N"},
+
+    {"id": "x_tra_3", "topic": "Tracao", "title": "6.3: Curva do latao",
+     "statement": [
+         "Da curva tensao-deformacao de um",
+         "latao, determine: (a) E; (b)",
+         "escoamento a 0.2%; (c) carga maxima",
+         "p/ d0=12.8 mm; (d) dl p/ L0=250 mm a",
+         "345 MPa.",
+     ],
+     "solution": [
+         "# (a) E = inclinacao da reta inicial",
+         "= E = 93.8 GPa",
+         "# (b) escoamento (offset 0.2%):",
+         "= sigma_e = 250 MPa",
+         "# (c) LRT~450 MPa; A=pi(6.4mm)^2",
+         "Fmax = 450e6*1.287e-4 = 57900 N",
+         "# (d) ler eps~0.06 a 345 MPa:",
+         "dl = 0.06*250 = 15 mm",
+     ],
+     "answer": ["E=93.8 GPa; sigma_e=250 MPa",
+                "Fmax=57900 N; dl=15 mm"],
+     "final": "E=93.8G; Fmax=57900N; dl=15"},
+
+    {"id": "x_tra_4", "topic": "Tracao", "title": "6.4: Ductilidade (%RA)",
+     "graph": None,
+     "statement": [
+         "Corpo de prova de aco: d0 = 12.8 mm.",
+         "Na fratura o diametro da secao e",
+         "df = 10.7 mm. Calcule a ductilidade",
+         "como reducao de area (%RA).",
+     ],
+     "solution": [
+         "# Reducao percentual de area:",
+         "%RA = (d0^2 - df^2)/d0^2 * 100",
+         "= (12.8^2 - 10.7^2)/12.8^2 * 100",
+         "= (163.84 - 114.49)/163.84 * 100",
+         "= %RA = 30 %",
+     ],
+     "answer": ["%RA = 30%"], "final": "%RA = 30%"},
 
     # ----- Graficos (leitura) -----
     {"id": "x_gra_1", "topic": "Graficos", "title": "Ex 1: Leitura do grafico",
@@ -586,8 +1190,9 @@ EXERCISES = [
 ]
 
 
-TOPIC_ORDER = ["Estruturas", "Densidade", "Difusao", "Arrhenius",
-               "Diagramas", "Alavanca", "Mecanicas", "Graficos", "Callister"]
+TOPIC_ORDER = ["Ligacoes", "Estruturas", "Densidade", "Difusao", "Arrhenius",
+               "Diagramas", "Alavanca", "Mecanicas", "Tracao", "Graficos",
+               "Callister"]
 
 
 # ----------------------------------------------------------------------------
@@ -595,6 +1200,17 @@ TOPIC_ORDER = ["Estruturas", "Densidade", "Difusao", "Arrhenius",
 # ----------------------------------------------------------------------------
 
 TEORIA = [
+    {"topic": "Ligacoes", "title": "Ligacoes quimicas", "pages": [
+        ("Ligacoes primarias", "metalica/covalente/ionica", [
+            "# Metalica:",
+            "mar de eletrons; metais e ligas.",
+            "# Covalente:",
+            "compartilha eletrons; polimeros e",
+            "algumas ceramicas.",
+            "# Ionica:",
+            "doa/recebe eletron; ceramicas e sais.",
+        ]),
+    ]},
     {"topic": "Estruturas", "title": "Estruturas cristalinas", "pages": [
         ("Celulas unitarias", "CFC, CCC, HC", [
             "# Relacao aresta a - raio R:",

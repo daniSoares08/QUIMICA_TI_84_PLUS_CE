@@ -4,6 +4,21 @@
 
 #define COUNT(a) ((uint8_t)(sizeof(a) / sizeof((a)[0])))
 
+static const TextLine teo_ligacoes_pg0[] = {
+    { "Metalica:", 14, 62, COL_BLUE },
+    { "mar de eletrons; metais e ligas.", 14, 82, COL_BLACK },
+    { "Covalente:", 14, 102, COL_BLUE },
+    { "compartilha eletrons; polimeros e", 14, 122, COL_BLACK },
+    { "algumas ceramicas.", 14, 142, COL_BLACK },
+    { "Ionica:", 14, 162, COL_BLUE },
+    { "doa/recebe eletron; ceramicas e sais.", 14, 182, COL_BLACK },
+};
+
+static const Page teo_ligacoes_pages[] = {
+    { "Ligacoes primarias", "metalica/covalente/ionica",
+      teo_ligacoes_pg0, COUNT(teo_ligacoes_pg0), 0, 0, 0 }
+};
+
 static const TextLine teo_estruturas_pg0[] = {
     { "Relacao aresta a - raio R:", 14, 62, COL_BLUE },
     { "CFC: a = 2 R raiz(2)", 14, 82, COL_BLACK },
@@ -107,6 +122,10 @@ static const Page teo_mecanicas_pages[] = {
       teo_mecanicas_pg0, COUNT(teo_mecanicas_pg0), 0, 0, 0 }
 };
 
+static const Exercise teo_ligacoes_ex[] = {
+    { "Ligacoes quimicas", teo_ligacoes_pages, COUNT(teo_ligacoes_pages) },
+};
+
 static const Exercise teo_estruturas_ex[] = {
     { "Estruturas cristalinas", teo_estruturas_pages, COUNT(teo_estruturas_pages) },
 };
@@ -136,6 +155,7 @@ static const Exercise teo_mecanicas_ex[] = {
 };
 
 static const Topic teoria_topics[] = {
+    { "Ligacoes", teo_ligacoes_ex, COUNT(teo_ligacoes_ex) },
     { "Estruturas", teo_estruturas_ex, COUNT(teo_estruturas_ex) },
     { "Densidade", teo_densidade_ex, COUNT(teo_densidade_ex) },
     { "Difusao", teo_difusao_ex, COUNT(teo_difusao_ex) },

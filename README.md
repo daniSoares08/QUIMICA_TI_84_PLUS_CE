@@ -15,18 +15,22 @@ Cada exercicio segue: **Enunciado -> Grafico (quando ha) -> Resolucao
 
 ## Conteudo
 
-Topicos (Exercicios): Estruturas, Densidade, Difusao, Arrhenius, Diagramas,
-Alavanca (regra da alavanca), Mecanicas, Graficos e Callister (lista do Cap. 6
-de Propriedades Mecanicas: 6.3, 6.4, 6.9, 6.25, 6.27, 6.31). Cada exercicio tem enunciado,
-resolucao passo a passo (formula -> valores -> resposta com unidade) e, quando
-o assunto pede, um grafico desenhado:
+45 exercicios em 11 topicos (Exercicios): Ligacoes, Estruturas, Densidade,
+Difusao, Arrhenius, Diagramas, Alavanca (regra da alavanca), Mecanicas, Tracao
+(exemplos Callister 6.1-6.4), Graficos e Callister (lista do Cap. 6 de
+Propriedades Mecanicas: 6.3, 6.4, 6.9, 6.25, 6.27, 6.31). As questoes vem dos
+estudos de caso (MateriaCraft Partes 1, 2 e 4), das listas de difusao/estruturas,
+da prova de propriedades mecanicas e dos slides de aula. Cada exercicio tem
+enunciado, resolucao passo a passo (formula -> valores -> resposta com unidade)
+e, quando o assunto pede, um grafico desenhado:
 
 - celula CFC / CCC (estruturas cristalinas e densidade),
 - perfil de concentracao (difusao, 1a Lei de Fick),
 - reta de Arrhenius (lnD x 1/T),
 - diagrama de fases isomorfo (Cu-Ni) com linha de amarracao,
-- diagrama eutetico (Pb-Sn),
-- curvas tensao-deformacao (propriedades mecanicas).
+- diagrama eutetico (Pb-Sn) e Cu-Ag (prata de lei),
+- trecho do Fe-Fe3C com ponto eutetoide (acos 1045/1086),
+- curvas tensao-deformacao (propriedades mecanicas e latao).
 
 Teoria: um resumo de formulas por topico (extraido do guia pratico).
 
